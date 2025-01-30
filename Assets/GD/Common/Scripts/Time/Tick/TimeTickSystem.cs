@@ -41,7 +41,7 @@ namespace GD.Tick
         #region Unity Lifecycle
 
         // Awake is called when the script instance is being loaded.
-        private void Awake()
+        protected override void Awake()
         {
             if (baseTickIntervalSecs <= 0)
                 throw new Exception("Tick System Base Tick Interval must be > 0!");

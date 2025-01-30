@@ -9,7 +9,7 @@ namespace GD
     /// </summary>
     public class EventContext
     {
-        private readonly Dictionary<Type, object> _data = new Dictionary<Type, object>();
+        private readonly Dictionary<Type, object> data = new Dictionary<Type, object>();
         public object Sender { get; }
         public int DelayMs { get; }
         public int RepeatCount { get; }
@@ -35,7 +35,7 @@ namespace GD
             foreach (var (type, value) in values)
             {
                 if (value != null)
-                    _data[type] = value;
+                    data[type] = value;
             }
         }
 
@@ -44,7 +44,7 @@ namespace GD
         /// </summary>
         public T Get<T>()
         {
-            if (_data.TryGetValue(typeof(T), out object value))
+            if (data.TryGetValue(typeof(T), out object value))
                 return (T)value;
             throw new Exception($"EventContext does not contain a value of type {typeof(T)}");
         }
@@ -52,7 +52,7 @@ namespace GD
         /// <summary>
         /// Checks if the context contains a value of the specified type.
         /// </summary>
-        public bool Contains<T>() => _data.ContainsKey(typeof(T));
+        public bool Contains<T>() => data.ContainsKey(typeof(T));
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ namespace GD
     public class EventManager : Singleton<EventManager>
     {
         private Dictionary<string, List<Action<EventContext>>> eventDictionary = new Dictionary<string, List<Action<EventContext>>>();
-        private Queue<(string eventName, EventContext eventData)> _eventQueue = new Queue<(string, EventContext)>();
+        private Queue<(string eventName, EventContext eventData)> eventQueue = new Queue<(string, EventContext)>();
 
         /// <summary>
         /// Registers a listener for a named event, supporting wildcard patterns.
@@ -123,7 +123,7 @@ namespace GD
         /// </summary>
         public void QueueEvent(string eventName, EventContext eventData)
         {
-            _eventQueue.Enqueue((eventName, eventData));
+            eventQueue.Enqueue((eventName, eventData));
         }
 
         /// <summary>
@@ -152,9 +152,9 @@ namespace GD
         /// </summary>
         private void Update()
         {
-            while (_eventQueue.Count > 0)
+            while (eventQueue.Count > 0)
             {
-                var (eventName, eventData) = _eventQueue.Dequeue();
+                var (eventName, eventData) = eventQueue.Dequeue();
                 RaiseEvent(eventName, eventData);
             }
         }

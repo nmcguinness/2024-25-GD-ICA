@@ -397,7 +397,6 @@
 "Assets/GD/Common/Scripts/Items/Interfaces/IInteractable.cs"
 "Assets/GD/Common/Scripts/Manager/Audio/AudioManager.cs"
 "Assets/GD/Common/Scripts/Manager/Event/EventManager.cs"
-"Assets/GD/Common/Scripts/Manager/Game/GameManager.cs"
 "Assets/GD/Common/Scripts/Manager/Inventory/InventoryManager.cs"
 "Assets/GD/Common/Scripts/Manager/Selection/Single-response/AdvancedSelectionManager.cs"
 "Assets/GD/Common/Scripts/Manager/State/Conditions/Base/ConditionBase.cs"
