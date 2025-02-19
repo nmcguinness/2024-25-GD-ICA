@@ -5,13 +5,13 @@
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
-**/IntroToShaderGraph/[Ll]ibrary/
-**/IntroToShaderGraph/[Tt]emp/
-**/IntroToShaderGraph/[Oo]bj/
-**/IntroToShaderGraph/[Bb]uild/
-**/IntroToShaderGraph/[Bb]uilds/
-**/IntroToShaderGraph/[Ll]ogs/
-**/IntroToShaderGraph/[Uu]ser[Ss]ettings/
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
 
 **/[Aa]ssets/Lecturer/*
 **/[Aa]ssets/Plugins/*

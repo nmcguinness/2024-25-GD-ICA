@@ -1,10 +1,10 @@
 Using pre-set license
-Built from '2022.3/staging' branch; Version is '2022.3.17f1 (4fc78088f837) revision 5228416'; Using compiler version '192829333'; Build Type 'Release'
+Built from '6000.0/staging' branch; Version is '6000.0.34f1 (5ab2d9ed9190) revision 5944025'; Using compiler version '193933523'; Build Type 'Release'
 OS: 'Windows 11  (10.0.26100) 64bit Core' Language: 'en' Physical Memory: 32498 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2022.3.17f1\Editor\Unity.exe
+C:\Program Files\Unity\Hub\Editor\6000.0.34f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
@@ -15,7 +15,13 @@ D:/Work/2024-25/Semester 1/3DGD/Repos/2024-25-GD-ICA
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-61162
+52838
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
 Successfully changed project path to: D:/Work/2024-25/Semester 1/3DGD/Repos/2024-25-GD-ICA
 D:/Work/2024-25/Semester 1/3DGD/Repos/2024-25-GD-ICA
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -48,18 +54,34 @@ D:/Work/2024-25/Semester 1/3DGD/Repos/2024-25-GD-ICA
     "memorysetup-temp-allocator-size-audio-worker=65536"
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [36092] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2454385124 [EditorId] 2454385124 [Version] 1048832 [Id] WindowsEditor(7,WORK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [32100]  Target information:
 
-Player connection [36092] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2454385124 [EditorId] 2454385124 [Version] 1048832 [Id] WindowsEditor(7,WORK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [32100]  * "[IP] 10.102.242.39 [Port] 0 [Flags] 2 [Guid] 901434229 [EditorId] 901434229 [Version] 1048832 [Id] WindowsEditor(7,WORK) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-[Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 19.11 ms, found 3 plugins.
+Player connection [32100] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [32100] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 2.86 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Initialize engine version: 2022.3.17f1 (4fc78088f837)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Resources/UnitySubsystems
+Initialize engine version: 6000.0.34f1 (5ab2d9ed9190)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/Work/2024-25/Semester 1/3DGD/Repos/2024-25-GD-ICA/Assets
-GfxDevice: creating device client; threaded=0; jobified=0
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce RTX 3070 Laptop GPU (ID=0x24dd)
@@ -67,468 +89,467 @@ Direct3D:
     VRAM:     8020 MB
     Driver:   32.0.15.5612
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56208
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2022.3.17f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.014052 seconds.
-- Loaded All Assemblies, in  0.395 seconds
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Registered in 0.011119 seconds.
+- Loaded All Assemblies, in  0.741 seconds
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 482 ms
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 329 ms
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.705 seconds
-Domain Reload Profiling: 1097ms
-	BeginReloadAssembly (117ms)
+- Finished resetting the current domain, in  1.129 seconds
+Domain Reload Profiling: 1862ms
+	BeginReloadAssembly (244ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (11ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (161ms)
-		LoadAssemblies (115ms)
+	RebuildCommonClasses (72ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (97ms)
+	LoadAllAssembliesAndSetupDomain (298ms)
+		LoadAssemblies (237ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (158ms)
-			TypeCache.Refresh (156ms)
-				TypeCache.ScanAssembly (141ms)
-			ScanForSourceGeneratedMonoScriptInfo (1ms)
+		AnalyzeDomain (292ms)
+			TypeCache.Refresh (290ms)
+				TypeCache.ScanAssembly (267ms)
+			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (706ms)
+	FinalizeReload (1130ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (643ms)
+		SetupLoadedEditorAssemblies (1075ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (467ms)
-			SetLoadedEditorAssemblies (4ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (123ms)
-			ProcessInitializeOnLoadMethodAttributes (47ms)
+			InitializePlatformSupportModulesInManaged (648ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (213ms)
+			ProcessInitializeOnLoadMethodAttributes (119ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
 ========================================================================
 Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.833 seconds
-Refreshing native plugins compatible for Editor in 4.95 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.245 seconds
+Refreshing native plugins compatible for Editor in 1.49 ms, found 3 plugins.
+Native extension for Android target not found
 Native extension for UWP target not found
 Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.067 seconds
-Domain Reload Profiling: 1898ms
-	BeginReloadAssembly (164ms)
+- Finished resetting the current domain, in  1.694 seconds
+Domain Reload Profiling: 2933ms
+	BeginReloadAssembly (274ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
+		DisableScriptedObjects (11ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (10ms)
-	initialDomainReloadingComplete (50ms)
-	LoadAllAssembliesAndSetupDomain (571ms)
-		LoadAssemblies (424ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (66ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (66ms)
+	LoadAllAssembliesAndSetupDomain (810ms)
+		LoadAssemblies (586ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (241ms)
-			TypeCache.Refresh (218ms)
-				TypeCache.ScanAssembly (197ms)
-			ScanForSourceGeneratedMonoScriptInfo (16ms)
-			ResolveRequiredComponents (4ms)
-	FinalizeReload (1068ms)
+		AnalyzeDomain (390ms)
+			TypeCache.Refresh (318ms)
+				TypeCache.ScanAssembly (288ms)
+			BuildScriptInfoCaches (59ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (1695ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (892ms)
+		SetupLoadedEditorAssemblies (1494ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (32ms)
-			SetLoadedEditorAssemblies (6ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (98ms)
-			ProcessInitializeOnLoadAttributes (690ms)
-			ProcessInitializeOnLoadMethodAttributes (56ms)
-			AfterProcessingInitializeOnLoad (10ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (8ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 4.36 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3238 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 44 unused Assets / (64.1 KB). Loaded Objects now: 3688.
-Memory consumption went from 132.6 MB to 132.5 MB.
-Total: 14.763800 ms (FindLiveObjects: 0.278900 ms CreateObjectMapping: 0.236500 ms MarkObjects: 14.116000 ms  DeleteObjects: 0.131300 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:scripting/monoscript/fileName/DOTweenModuleUtils.cs:  -> 34ad347c902a97803d1c13fe65e97957
-  custom:scripting/precompiled-assembly-types:Sirenix.OdinInspector.Attributes:  -> dc05933eb78090cd5853a17a2a15fbf2
-  custom:scripting/monoscript/fileName/DOTweenModuleUnityVersion.cs:  -> 5fda8b30fb2f0276062c9b201e3b53c4
-  custom:scripting/precompiled-assembly-types:Sirenix.Serialization.Config:  -> d73bda365eaf1e1c6acc941bd4635622
-  custom:scripting/monoscript/fileName/DOTweenModuleUI.cs:  -> 53c26b618f695b59a868eebdc97332ad
-  custom:scripting/precompiled-assembly-types:Assembly-CSharp-firstpass:  -> 61aef15b9111caaa2c8735e16e59598b
-  custom:scripting/precompiled-assembly-types:DOTween:  -> 41770a3e10244ae0a34e714162bbdba6
-  custom:scripting/precompiled-assembly-types:Sirenix.Utilities:  -> 3eac58a175199bf14a917c8b0e8fe7c9
-  custom:scripting/precompiled-assembly-types:Sirenix.Serialization:  -> d40ac4dea0c6cd312353b1d9bd0e929a
-  custom:scripting/precompiled-assembly-types:Sirenix.OdinInspector.Editor:  -> 783d083509b553031c55b82d41968545
-  custom:scripting/monoscript/fileName/DOTweenModuleAudio.cs:  -> 371877257ce39f5f0996ea556debbc8a
-  custom:scripting/monoscript/fileName/DOTweenModulePhysics2D.cs:  -> 63b0e5981d81d026672954b54596f5ae
-  custom:scripting/precompiled-assembly-types:DOTweenEditor:  -> 1efdf497b099e4e6944f0dd7fb28c744
-  custom:scripting/monoscript/fileName/DOTweenModuleSprite.cs:  -> e35fb5eb1c483cffc283a374a5e25466
-  custom:scripting/precompiled-assembly-types:Sirenix.Utilities.Editor:  -> 1a2b84993dc70e0fc09fb6b84161c4a4
-  custom:scripting/monoscript/fileName/DOTweenModulePhysics.cs:  -> 87f8974001cd2397421cfdcad1904e83
-  custom:scripting/monoscript/fileName/EnsureCorrectOdinVersion.cs:  -> 6e76217be3dc4ab73a43b122fee05b7e
-  custom:scripting/monoscript/fileName/OdinUpgrader.cs:  -> ee3d9228da7555b7ff3d8bc8c2e703d7
-  custom:scripting/precompiled-assembly-types:DOTweenUpgradeManager:  -> 16e542c52fa73d4cbcd5cf54d161ea3b
-  custom:scripting/precompiled-assembly-types:Sirenix.Reflection.Editor:  -> 3f78c56edd12a0461cd474bc411bc767
-========================================================================
-Received Import Request.
-  Time since last request: 2395.111479 seconds.
-  path: Assets/GD/Common/Scripts/Time/Tick/TimeTickSystem.cs
-  artifactKey: Guid(117d69e5615d2904f810a27afd9d6564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Time/Tick/TimeTickSystem.cs using Guid(117d69e5615d2904f810a27afd9d6564) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b977ce634e9b6b8c491da99cbfc4a13') in 0.004040 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 6710.288177 seconds.
-  path: Assets/GD/Common/Scripts/Manager
-  artifactKey: Guid(51236bf0f3588e0409bd09eaf0c87ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager using Guid(51236bf0f3588e0409bd09eaf0c87ec4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4fbf11a4158b44e837218b5037d5691') in 0.005329 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 5.008900 seconds.
-  path: Assets/GD/Common/Scripts/Manager/Event
-  artifactKey: Guid(42cf7b714abcc954d9b7aef01fa82706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/Event using Guid(42cf7b714abcc954d9b7aef01fa82706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e777a2544fabb2baf68ada5c1e36b98a') in 0.000809 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 22.733616 seconds.
-  path: Assets/GD/Common/Scripts/Patterns/Pool/ObjectPool.cs
-  artifactKey: Guid(e15c1a1cd68b6c7459de70fbe8f27a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Patterns/Pool/ObjectPool.cs using Guid(e15c1a1cd68b6c7459de70fbe8f27a01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acd2135054f476e63d22848340558ef5') in 0.001772 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 30.133653 seconds.
-  path: Assets/GD/Common/Scripts/Manager/Event/EventManager.cs
-  artifactKey: Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/Event/EventManager.cs using Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65bdc654a3b423248b2478cf4f0a204c') in 0.002127 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 179.724837 seconds.
-  path: Assets/GD/Common/Scripts/Manager/Event/EventManager.cs
-  artifactKey: Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/Event/EventManager.cs using Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88ad4faab08ba265d614a5a48f0793e8') in 0.001428 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 553.144438 seconds.
-  path: Assets/GD/Common/Scripts/Manager/Event/EventManager.cs
-  artifactKey: Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/Event/EventManager.cs using Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0d7206ac3637d146898e0ef24b03e4') in 0.000985 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 99.535021 seconds.
-  path: Assets/GD/Common/Scripts/Manager/Event/EventManager.cs
-  artifactKey: Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/Event/EventManager.cs using Guid(cac2118d236a67447ae5aebdf30c9f16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '096e54079dcab85f150b45f823d4f184') in 0.001222 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 992.439948 seconds.
-  path: Assets/GD/Common/Scripts/Tweens/UI/UISlideTween.cs
-  artifactKey: Guid(8e6463213b12eaa4bb00dd00bfd7ad53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Tweens/UI/UISlideTween.cs using Guid(8e6463213b12eaa4bb00dd00bfd7ad53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d3c2f35600c689f78c871f0973e186d') in 0.001423 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 0.540814 seconds.
-  path: Assets/GD/Common/Scripts/Tweens/UI/UIScaleTween.cs
-  artifactKey: Guid(d93f72b4010010f4b8b0f8887019967d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Tweens/UI/UIScaleTween.cs using Guid(d93f72b4010010f4b8b0f8887019967d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b6bf2f169d92ae66274db8b6b840484') in 0.000652 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 23.760446 seconds.
-  path: Assets/GD/Common/Scripts/Manager/State/Conditions/Context/ConditionContext.cs
-  artifactKey: Guid(3160f4781c1dc8647b7197effb74e486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/State/Conditions/Context/ConditionContext.cs using Guid(3160f4781c1dc8647b7197effb74e486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d5bfb69d70040b77e88c452e8378b36') in 0.000807 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Import Request.
-  Time since last request: 53.615085 seconds.
-  path: Assets/GD/Common/Scripts/Manager/State/Conditions/Context/ConditionContext.cs
-  artifactKey: Guid(3160f4781c1dc8647b7197effb74e486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GD/Common/Scripts/Manager/State/Conditions/Context/ConditionContext.cs using Guid(3160f4781c1dc8647b7197effb74e486) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043c576cedfe834ea88a061fc2a3701b') in 0.000642 seconds
-Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.587 seconds
-Refreshing native plugins compatible for Editor in 14.49 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Odin's validation config asset could not be loaded during InitializeOnLoad of batch mode or headless run of the Unity Editor. Delaying validation hook initialization to a fallback event that takes place during asset post processing.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Sirenix.OdinValidator.Editor.AutomationConfig:InitHooks () (at D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs:148)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs Line: 148)
-
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  6.089 seconds
-Domain Reload Profiling: 7674ms
-	BeginReloadAssembly (424ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (16ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (183ms)
-	RebuildCommonClasses (50ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (73ms)
-	LoadAllAssembliesAndSetupDomain (1019ms)
-		LoadAssemblies (781ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (360ms)
-			TypeCache.Refresh (211ms)
-				TypeCache.ScanAssembly (170ms)
-			ScanForSourceGeneratedMonoScriptInfo (133ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (6090ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (4802ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (93ms)
-			SetLoadedEditorAssemblies (11ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (2260ms)
-			ProcessInitializeOnLoadAttributes (2311ms)
-			ProcessInitializeOnLoadMethodAttributes (113ms)
-			AfterProcessingInitializeOnLoad (14ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (11ms)
-Refreshing native plugins compatible for Editor in 6.72 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3221 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 41 unused Assets / (34.9 KB). Loaded Objects now: 3768.
-Memory consumption went from 157.1 MB to 157.1 MB.
-Total: 24.073000 ms (FindLiveObjects: 0.263800 ms CreateObjectMapping: 0.246800 ms MarkObjects: 23.433200 ms  DeleteObjects: 0.128000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.827 seconds
-Refreshing native plugins compatible for Editor in 5.54 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Odin's validation config asset could not be loaded during InitializeOnLoad of batch mode or headless run of the Unity Editor. Delaying validation hook initialization to a fallback event that takes place during asset post processing.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Sirenix.OdinValidator.Editor.AutomationConfig:InitHooks () (at D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs:148)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
-
-(Filename: D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs Line: 148)
-
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.000 seconds
-Domain Reload Profiling: 2823ms
-	BeginReloadAssembly (241ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (61ms)
-	RebuildCommonClasses (59ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (455ms)
-		LoadAssemblies (472ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (119ms)
-			TypeCache.Refresh (95ms)
-				TypeCache.ScanAssembly (82ms)
-			ScanForSourceGeneratedMonoScriptInfo (15ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (2001ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1461ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (51ms)
-			SetLoadedEditorAssemblies (10ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (162ms)
-			ProcessInitializeOnLoadAttributes (1098ms)
-			ProcessInitializeOnLoadMethodAttributes (127ms)
+			InitializePlatformSupportModulesInManaged (18ms)
+			SetLoadedEditorAssemblies (9ms)
+			BeforeProcessingInitializeOnLoad (209ms)
+			ProcessInitializeOnLoadAttributes (1009ms)
+			ProcessInitializeOnLoadMethodAttributes (236ms)
 			AfterProcessingInitializeOnLoad (13ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Refreshing native plugins compatible for Editor in 4.87 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (11ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3222 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (34.2 KB). Loaded Objects now: 3770.
-Memory consumption went from 159.6 MB to 159.5 MB.
-Total: 16.531600 ms (FindLiveObjects: 0.286300 ms CreateObjectMapping: 0.235700 ms MarkObjects: 15.936300 ms  DeleteObjects: 0.072200 ms)
+Unloading 14 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3384 unused Assets / (1.0 MB). Loaded Objects now: 3931.
+Memory consumption went from 83.4 MB to 82.4 MB.
+Total: 35.262100 ms (FindLiveObjects: 0.494700 ms CreateObjectMapping: 0.619300 ms MarkObjects: 32.487300 ms  DeleteObjects: 1.659500 ms)
 
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.789 seconds
-Refreshing native plugins compatible for Editor in 5.87 ms, found 3 plugins.
-Native extension for UWP target not found
-Native extension for WindowsStandalone target not found
-Native extension for Android target not found
-Odin's validation config asset could not be loaded during InitializeOnLoad of batch mode or headless run of the Unity Editor. Delaying validation hook initialization to a fallback event that takes place during asset post processing.
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-Sirenix.OdinValidator.Editor.AutomationConfig:InitHooks () (at D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs:148)
-System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
-System.Reflection.MethodBase:Invoke (object,object[])
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes ()
+Received Import Request.
+  Time since last request: 169998.081925 seconds.
+  path: Assets/GD/Common/Scripts/Gizmos/ArrowGizmo.cs
+  artifactKey: Guid(c7f2e5644cc282c458f70974770aa90c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Gizmos/ArrowGizmo.cs using Guid(c7f2e5644cc282c458f70974770aa90c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6d4566f41417da4e2b1fdeb95ab1614a') in 0.1444784 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
-(Filename: D:/Sirenix/Sirenix Solution/Sirenix.OdinValidator.Editor/Config/AutomationConfig.cs Line: 148)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/GD/Common/Scripts/Extensions/LayerMaskExtensions.cs
+  artifactKey: Guid(a756a4769edff594b9c62a797cb76c2f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Extensions/LayerMaskExtensions.cs using Guid(a756a4769edff594b9c62a797cb76c2f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '02f6367e0b680c8995092d20f8fad631') in 0.0052196 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.702 seconds
-Domain Reload Profiling: 2487ms
-	BeginReloadAssembly (212ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (5ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (59ms)
-	RebuildCommonClasses (63ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (46ms)
-	LoadAllAssembliesAndSetupDomain (448ms)
-		LoadAssemblies (465ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (95ms)
-			TypeCache.Refresh (74ms)
-				TypeCache.ScanAssembly (60ms)
-			ScanForSourceGeneratedMonoScriptInfo (12ms)
-			ResolveRequiredComponents (6ms)
-	FinalizeReload (1702ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1148ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (38ms)
-			SetLoadedEditorAssemblies (7ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (125ms)
-			ProcessInitializeOnLoadAttributes (866ms)
-			ProcessInitializeOnLoadMethodAttributes (100ms)
-			AfterProcessingInitializeOnLoad (12ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (9ms)
-Refreshing native plugins compatible for Editor in 4.80 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3221 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (33.6 KB). Loaded Objects now: 3772.
-Memory consumption went from 161.4 MB to 161.4 MB.
-Total: 15.323300 ms (FindLiveObjects: 0.265700 ms CreateObjectMapping: 0.231000 ms MarkObjects: 14.736800 ms  DeleteObjects: 0.088800 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb
+  artifactKey: Guid(8f46310a8b0a8f04a92993c37c713243) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll.mdb using Guid(8f46310a8b0a8f04a92993c37c713243) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '602d739f87b9e787c6450da131e4e16d') in 0.0073094 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
-Prepare: number of updated asset objects reloaded= 0
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/GD/Common/Scripts/Controllers/Camera/SimpleCameraController.cs
+  artifactKey: Guid(1fee3f7dd64f0964f834feda5b02f20d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Controllers/Camera/SimpleCameraController.cs using Guid(1fee3f7dd64f0964f834feda5b02f20d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '18305bf4e0f0d59533ec6616789a4a3d') in 0.0076763 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000214 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll
+  artifactKey: Guid(5651992cdad94894a3af7dc3f1da9170) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll using Guid(5651992cdad94894a3af7dc3f1da9170) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5651359fb9ab0b8dafe056fd850947d4') in 0.0207468 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables.data
+  artifactKey: Guid(d92d0eb8b980c6d44b5f0e64a620355b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Addressables.data using Guid(d92d0eb8b980c6d44b5f0e64a620355b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f997864ccec08495b2f331146d188c4a') in 0.0041601 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/GD/Common/Scripts/Items/Interfaces/IEquippable.cs
+  artifactKey: Guid(f43546f9677357346b0e77f5887634ac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Items/Interfaces/IEquippable.cs using Guid(f43546f9677357346b0e77f5887634ac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ede3612413dc6fc07ee9de4e7bd5cd84') in 0.0068585 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000368 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs
+  artifactKey: Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleUI.cs using Guid(a060394c03331a64392db53a10e7f2d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1d0e45a2d12dcf116c6bf132defba510') in 0.0073039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/GD/Common/Editor/Hierarchy/HierarchyWindowGroupHeader.cs
+  artifactKey: Guid(f09e7a5a11cf52545afaa048820971ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Editor/Hierarchy/HierarchyWindowGroupHeader.cs using Guid(f09e7a5a11cf52545afaa048820971ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3b317107567c812a20b23a9c481f4f37') in 0.0070874 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll
+  artifactKey: Guid(1e0a9643dc0d4b46bf2321f72c4e503e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll using Guid(1e0a9643dc0d4b46bf2321f72c4e503e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fc98c48a4fbeb7b9094b11705b83bd06') in 0.0098191 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinValidator.Editor.xml
+  artifactKey: Guid(afbf832bc46149f5a291e87cab63096f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinValidator.Editor.xml using Guid(afbf832bc46149f5a291e87cab63096f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3fa56a216599e95243f68d2adf78f13e') in 0.0107457 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/GD/Common/Scripts/Attributes/RequireInterfaceAttribute.cs
+  artifactKey: Guid(8edf932c985dc564d9b20dda775fed66) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Attributes/RequireInterfaceAttribute.cs using Guid(8edf932c985dc564d9b20dda775fed66) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ed4ae122a86310c5e3525427ee4b4860') in 0.006631 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/GD/Common/Scripts/Attributes/AudioClipButtonAttribute.cs
+  artifactKey: Guid(9bdb5ecd6dfebe54b9823cff1e54cdbf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Attributes/AudioClipButtonAttribute.cs using Guid(9bdb5ecd6dfebe54b9823cff1e54cdbf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b33d8da7bd86a676908a82bd01aac2b9') in 0.0060959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll
+  artifactKey: Guid(d2a8f0021d6b47c5923d8972dfb81ef1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll using Guid(d2a8f0021d6b47c5923d8972dfb81ef1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '94fe8695df031f3f6496635b4d028535') in 0.0061522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000187 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.pdb
+  artifactKey: Guid(1e0a9643dc0d4b46bf2321f72c4e0a6f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.pdb using Guid(1e0a9643dc0d4b46bf2321f72c4e0a6f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '34b012ade89a135516492ddd3d616468') in 0.0045559 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000106 seconds.
+  path: Assets/GD/Common/Scripts/Selection/Providers/GameObjectRayProvider.cs
+  artifactKey: Guid(765a675231b116743802dfb573829904) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Selection/Providers/GameObjectRayProvider.cs using Guid(765a675231b116743802dfb573829904) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5ae01c3b657230c08fa5275fc943b437') in 0.0061208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll
+  artifactKey: Guid(5c65184932ff4fd48a343e2360256baf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll using Guid(5c65184932ff4fd48a343e2360256baf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c1da2bd825a292bcf5c95d917d31333b') in 0.0122558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000116 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml
+  artifactKey: Guid(4873f2a8bdae42baa0406e8a6136096f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.xml using Guid(4873f2a8bdae42baa0406e8a6136096f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '06b6905ec2b32e4e5965f31ed47b1b6f') in 0.0083276 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/GD/Common/Scripts/ScriptableObjects/Collections/List/SO_StringList.cs
+  artifactKey: Guid(5890f7089efe9724fa8df4bc324956dc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/ScriptableObjects/Collections/List/SO_StringList.cs using Guid(5890f7089efe9724fa8df4bc324956dc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '94f0a818a71f1df441036ec2f980f770') in 0.0091981 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000251 seconds.
+  path: Assets/Plugins/Sirenix/Odin Validator/Editor/Config/GlobalValidationConfig.asset
+  artifactKey: Guid(1662171ffb4d6154690f2f89fe03b530) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Validator/Editor/Config/GlobalValidationConfig.asset using Guid(1662171ffb4d6154690f2f89fe03b530) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a9b43690b0f2aab782b9890ea9955e5a') in 0.0327801 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000153 seconds.
+  path: Assets/GD/Common/Scripts/ScriptableObjects/Collections/Queue/SO_StringQueue.cs
+  artifactKey: Guid(ea88f1fe6f3b22b4f86de4ff02e5a8a1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/ScriptableObjects/Collections/Queue/SO_StringQueue.cs using Guid(ea88f1fe6f3b22b4f86de4ff02e5a8a1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '10689ee381cda06a2b1b0807db9e6289') in 0.0064362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000117 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/GeneralDrawerConfig.asset
+  artifactKey: Guid(5eb999a6c0eae80479df94391b5645e0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/GeneralDrawerConfig.asset using Guid(5eb999a6c0eae80479df94391b5645e0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '85985fa1c7337f5b5aed71ab54b7de99') in 0.0143342 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png
+  artifactKey: Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/Imgs/Footer.png using Guid(7051dba417b3d53409f2918f1ea4938d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd8203fb0d8f38922578053218227845b') in 0.0983924 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000155 seconds.
+  path: Assets/GD/Common/Scripts/UI/UIRichTextMultiPrompt.cs
+  artifactKey: Guid(09aa9d425b08f7b42a4b2979d313bfcd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/UI/UIRichTextMultiPrompt.cs using Guid(09aa9d425b08f7b42a4b2979d313bfcd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4cf40b25daae48235f5b75b620104432') in 0.005177 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset
+  artifactKey: Guid(5785834664d7eb347a4499e88bab6475) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/OdinModuleConfig.asset using Guid(5785834664d7eb347a4499e88bab6475) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'db31c65db09c4ed57630846b51fdb305') in 0.0095068 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/DOTween.XML
+  artifactKey: Guid(34192c5e0d14aee43a0e86cc4823268a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/DOTween.XML using Guid(34192c5e0d14aee43a0e86cc4823268a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0e72fcbf1ebe10a6e2da28b6c4ec320d') in 0.0051835 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Plugins/Sirenix/Odin Validator/EnsureCorrectOdinVersion.cs
+  artifactKey: Guid(9454f64e8640a944ca8605d5b465d784) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Validator/EnsureCorrectOdinVersion.cs using Guid(9454f64e8640a944ca8605d5b465d784) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a720908a6a39e5d15ca18c2b314b09bc') in 0.0063587 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Scenes/SampleScene.unity
+  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Scenes/SampleScene.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1f886274f739d347c1314840f763b334') in 0.003848 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/GD/Common/Editor/Inspector/ToggleInspectorLock.cs
+  artifactKey: Guid(f7cef161148159f4bb106d12911aafe9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Editor/Inspector/ToggleInspectorLock.cs using Guid(f7cef161148159f4bb106d12911aafe9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '865e25d68f823f0b93e8b34ff6cf26f9') in 0.0055159 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.pdb
+  artifactKey: Guid(a4865f1ab4504ed8a368670db22f0a6f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.pdb using Guid(a4865f1ab4504ed8a368670db22f0a6f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee9b3f36a5d174434fbb61876fd08611') in 0.0048467 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000115 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Entities.data
+  artifactKey: Guid(728df0e3465c1a148b83053a3f31d489) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Entities.data using Guid(728df0e3465c1a148b83053a3f31d489) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '52e0f962d7ed5bf0cb24e30e6369209b') in 0.0040834 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000135 seconds.
+  path: Assets/GD/Common/Scripts/Tweens/GameObject/TweenPosition.cs
+  artifactKey: Guid(5a18a0988c8002744bf59ebe2d06f839) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Tweens/GameObject/TweenPosition.cs using Guid(5a18a0988c8002744bf59ebe2d06f839) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6beab8a42da2dc27052d5fe11a5ddaec') in 0.0051679 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000118 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs
+  artifactKey: Guid(b766d08851589514b97afb23c6f30a70) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/Modules/DOTweenModuleAudio.cs using Guid(b766d08851589514b97afb23c6f30a70) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '33129428c9d47a3779d3653ec04cfdc2') in 0.0062591 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/GD/Common/Scripts/Inventory/InventoryCollection.cs
+  artifactKey: Guid(23d4cd5155b48f04d8c4bd4cd091e81c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Inventory/InventoryCollection.cs using Guid(23d4cd5155b48f04d8c4bd4cd091e81c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '975eaad958584da7dd0a01cdaa325488') in 0.005696 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/GD/Common/Scripts/ScriptableObjects/Collections/Queue/SO_GameObjectQueue.cs
+  artifactKey: Guid(5639e3e8f6c90154795e4026f1c481f8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/ScriptableObjects/Collections/Queue/SO_GameObjectQueue.cs using Guid(5639e3e8f6c90154795e4026f1c481f8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '27d0475b14319cff910bd25e5798d606') in 0.0068291 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/TypeRegistryUserConfig.asset
+  artifactKey: Guid(108afc1a76fe7cf49ba0b49b05cab004) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Config/Editor/TypeRegistryUserConfig.asset using Guid(108afc1a76fe7cf49ba0b49b05cab004) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '33d07341d07ffc22cf8d3cf5ab36a4c0') in 0.0150522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML
+  artifactKey: Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.XML using Guid(2e2c6224d345d9249acfa6e8ef40bb2d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1b4c9ed7b8bf74837c8911d19d3cc04a') in 0.0057494 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000100 seconds.
+  path: Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.pdb
+  artifactKey: Guid(47a84ebde4ec47fabb620b30cc7a0a6f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.pdb using Guid(47a84ebde4ec47fabb620b30cc7a0a6f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a8beb0124389afcf389e8ff89e8671c7') in 0.0042081 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000145 seconds.
+  path: Assets/Plugins/Sirenix/Odin Validator/Editor/Config/RuleConfig.asset
+  artifactKey: Guid(19f0ab8e840aad942bcb7243687c5723) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Validator/Editor/Config/RuleConfig.asset using Guid(19f0ab8e840aad942bcb7243687c5723) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '78ada1d147d0ac340b2a13e720dc8bb6') in 0.0075092 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.222514 seconds.
+  path: Assets/GD/Common/Scripts/ScriptableObjects/Types/Variables/GameObjectVariable.cs
+  artifactKey: Guid(f3fa956770ef0054587bb381c7f3f945) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/ScriptableObjects/Types/Variables/GameObjectVariable.cs using Guid(f3fa956770ef0054587bb381c7f3f945) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f915de1fb73437be70afd956089fe59') in 0.0067878 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000126 seconds.
+  path: Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Types/Int/IntGameEvent.cs
+  artifactKey: Guid(a7bbec931daf5d44aa384b8b1a746ddf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Types/Int/IntGameEvent.cs using Guid(a7bbec931daf5d44aa384b8b1a746ddf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e1685cb2413f3097dc7301d062837a0f') in 0.0302088 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/GD/Common/Scripts/Manager/State/Conditions/Examples/LayerCondition.cs
+  artifactKey: Guid(83b0669d01d38c341b78ec3c66fd4fae) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Manager/State/Conditions/Examples/LayerCondition.cs using Guid(83b0669d01d38c341b78ec3c66fd4fae) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '21854f2040c1f58341a4ab621514f591') in 0.0074964 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Hidden/ExtractSpriteShader.shader
+  artifactKey: Guid(0675e2791073a4147b190e55f1da7ac2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Plugins/Sirenix/Odin Inspector/Assets/Editor/Hidden/ExtractSpriteShader.shader using Guid(0675e2791073a4147b190e55f1da7ac2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7c660b7be45927fc5aa6b16e3b1e0160') in 0.0122734 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Types/Item/ItemGameEvent.cs
+  artifactKey: Guid(62e60f05373d7924eab358b57369b203) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Types/Item/ItemGameEvent.cs using Guid(62e60f05373d7924eab358b57369b203) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b5edf3146c94bfda9a4f7079b7f05ae9') in 0.0084358 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Base/BaseGameEvent.cs
+  artifactKey: Guid(3bafb97d568b97b418f96c4af134387e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/GD/Common/Scripts/Patterns/Event/Multi-parameter/Base/BaseGameEvent.cs using Guid(3bafb97d568b97b418f96c4af134387e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59abf22ea3da52e85b402b8aa50ffcdf') in 0.0047425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
