@@ -516,6 +516,8 @@
 "Assets/GD/Common/Scripts/Patterns/FSM/Predicates/IPredicate.cs"
 "Assets/GD/Common/Scripts/Patterns/FSM/States/CharacterState.cs"
 "Assets/GD/Common/Scripts/Patterns/FSM/States/Examples/IdleState.cs"
+"Assets/GD/Common/Scripts/Patterns/FSM/States/Examples/LevelUpState.cs"
+"Assets/GD/Common/Scripts/Patterns/FSM/States/Examples/PatrolState.cs"
 "Assets/GD/Common/Scripts/Patterns/FSM/States/IState.cs"
 "Assets/GD/Common/Scripts/Patterns/FSM/States/State.cs"
 "Assets/GD/Common/Scripts/Patterns/FSM/Transitions/ITransition.cs"
