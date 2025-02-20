@@ -17,16 +17,31 @@ public static class Vector3Extensions
             target.y = height;
     }
 
-    /*Some badly named quick demo methods*/
-    /*
-    public static void GetInfo(this ref Vector3 target, out float someCalc)
+    /// <summary>
+    /// Adds the specified values to the vector
+    /// </summary>
+    /// <param name="vector"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    /// <see cref="https://github.com/adammyhre/3D-Platformer/blob/master/Assets/_Project/Scripts/Utils/Extensions/Vector3Extensions.cs"/>
+    public static Vector3 Add(this Vector3 vector, float? x = null, float? y = null, float? z = null)
     {
-        someCalc = target.y * target.x * target.z;
+        return new Vector3(vector.x + (x ?? 0), vector.y + (y ?? 0), vector.z + (z ?? 0));
     }
 
-    public static float GetInfo(this ref Vector3 target)
+    /// <summary>
+    /// Sets the specified values to the vector
+    /// </summary>
+    /// <param name="vector"></param>
+    /// <param name="x"></param>
+    /// <param name="y"></param>
+    /// <param name="z"></param>
+    /// <returns></returns>
+    /// <see cref="https://github.com/adammyhre/3D-Platformer/blob/master/Assets/_Project/Scripts/Utils/Extensions/Vector3Extensions.cs"/>
+    public static Vector3 With(this Vector3 vector, float? x = null, float? y = null, float? z = null)
     {
-        return target.y * target.x * target.z;
+        return new Vector3(x ?? vector.x, y ?? vector.y, z ?? vector.z);
     }
-    */
 }

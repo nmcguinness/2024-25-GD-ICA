@@ -57,18 +57,18 @@
     }
 
     /// <summary>
-    /// Used in the StateManager to determine how to evaluate a condition.
+    /// Used in the GameStateManager to determine how to evaluate a condition.
     /// </summary>
-    public enum ConditionType : sbyte
+    public enum LogicType : sbyte
     {
         [Description("Evaluate all conditions and return true if all are met.")]
-        And,
+        AND,
 
         [Description("Evaluate all conditions and return true if any are met.")]
-        Or,
+        OR,
 
         [Description("Evaluate all conditions and return true if only one is met.")]
-        Xor
+        XOR
     }
 
     /// <summary>

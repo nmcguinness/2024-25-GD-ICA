@@ -58,7 +58,7 @@ namespace GD
     /// <summary>
     /// Centralized event manager that supports wildcard subscriptions, event queuing, delayed execution, and automatic removal of destroyed objects.
     /// <example>
-    ///   Example 1: Broadcasting and Listening for a Game State Change
+    ///   Example 1: Broadcasting and Listening for a Game GameState Change
     ///     void OnEnable() {
     ///         EventManager.Instance.RegisterListener("GameStateChanged", OnGameStateChanged);
     ///     }
