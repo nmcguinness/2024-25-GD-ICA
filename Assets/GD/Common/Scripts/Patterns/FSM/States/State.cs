@@ -8,7 +8,7 @@ namespace GD.FSM
         // Stores the reference to the blackboard used by the state
         protected Blackboard blackboard;
 
-        public Timer timer;
+        public Timer timer = new Timer();
 
         public State(Blackboard blackboard)
         {

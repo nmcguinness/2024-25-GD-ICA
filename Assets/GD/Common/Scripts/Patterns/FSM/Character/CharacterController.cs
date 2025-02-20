@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace GD.FSM
 {
@@ -30,6 +29,16 @@ namespace GD.FSM
 
             // 4. Set the initial state
             stateMachine.SetState(idleState);
+        }
+
+        private void FixedUpdate()
+        {
+            stateMachine.FixedUpdate();
+        }
+
+        private void Update()
+        {
+            stateMachine.Update();
         }
     }
 }

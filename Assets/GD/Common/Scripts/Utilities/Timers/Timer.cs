@@ -17,6 +17,7 @@ namespace GD.Utility
 
         public virtual void Start(int time = 0)
         {
+            this.isRunning = true;
             this.startTime = time;
             Reset(time);
         }
