@@ -2,18 +2,24 @@
 
 namespace GD.Utility
 {
-    /// <summary>
-    /// Support stopwatch and countdown timer functionality.
-    /// </summary>
     public class Timer
     {
+        //TODO - UnityEvent - OnStart, OnStop, Who should call update and fixedupdate?
+
         private bool isRunning = false;
         private float startTime = 0;
 
         private float elapsedUpdateTime = 0;
         private float elapsedFixedTime = 0;
 
-        public virtual void Start(int time = 0) => Reset(time);
+        public float ElapsedUpdateTime { get => elapsedUpdateTime - startTime; }
+        public float ElapsedFixedTime { get => elapsedFixedTime - startTime; }
+
+        public virtual void Start(int time = 0)
+        {
+            this.startTime = time;
+            Reset(time);
+        }
 
         public virtual void Reset(int time) => elapsedUpdateTime = elapsedFixedTime = time;
 
@@ -21,8 +27,16 @@ namespace GD.Utility
         {
         }
 
-        public virtual void Update() => elapsedUpdateTime += Time.deltaTime;
+        public virtual void Update()
+        {
+            if (isRunning)
+                elapsedUpdateTime += Time.deltaTime;
+        }
 
-        public virtual void FixedUpdate() => elapsedFixedTime += Time.fixedDeltaTime;
+        public virtual void FixedUpdate()
+        {
+            if (isRunning)
+                elapsedFixedTime += Time.fixedDeltaTime;
+        }
     }
 }
