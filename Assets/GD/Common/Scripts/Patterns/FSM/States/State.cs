@@ -7,6 +7,8 @@ namespace GD.FSM
         // Stores the reference to the blackboard used by the state
         protected Blackboard blackboard;
 
+        private Timer timer;
+
         public State(Blackboard blackboard)
         {
             this.blackboard = blackboard;
@@ -17,7 +19,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnEnter()
         {
-            //TODO: Implement this method
+            timer.Start();
         }
 
         /// <summary>
@@ -25,7 +27,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void Update()
         {
-            //TODO: Implement this method
+            timer.Update();
         }
 
         /// <summary>
@@ -33,7 +35,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void FixedUpdate()
         {
-            //TODO: Implement this method
+            timer.FixedUpdate();
         }
 
         /// <summary>
@@ -41,7 +43,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnExit()
         {
-            //TODO: Implement this method
+            timer.Stop();
         }
     }
 }
