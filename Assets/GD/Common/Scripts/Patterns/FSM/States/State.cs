@@ -1,4 +1,5 @@
 ﻿using GD.Utility;
+using UnityEngine;
 
 namespace GD.FSM
 {
@@ -19,6 +20,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnEnter()
         {
+            Debug.Log($"OnEnter: {GetType().Name} at {Time.time}");
             timer.Start();
         }
 
@@ -43,6 +45,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnExit()
         {
+            Debug.Log($"OnExit: {GetType().Name} at {Time.time}");
             timer.Stop();
         }
     }
