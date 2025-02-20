@@ -25,11 +25,26 @@ namespace GD.FSM
 
             // 3. Connect the states
             stateMachine.AddTransition(idleState, patrolState,
-                new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 5));
+                new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 2));
+            stateMachine.AddTransition(patrolState, idleState,
+               new FuncPredicate(() => patrolState.timer.ElapsedUpdateTime > 5));
+
+            // 3a. Add the ANY transition states
+            var levelUpState = new LevelUpState(blackboard, this, animator);
+
+            stateMachine.AddAnyTransition(levelUpState,
+                new FuncPredicate(() => blackboard.XP > 100));
+
+            // 3b. Add composite predicate example
 
             // 4. Set the initial state
             stateMachine.SetState(idleState);
         }
+
+        //public void Anonymous(Blackboard b)
+        //{
+        //    return blackboard.XP > 100;
+        //}
 
         private void FixedUpdate()
         {

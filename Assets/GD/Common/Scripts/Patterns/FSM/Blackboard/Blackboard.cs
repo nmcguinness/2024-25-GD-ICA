@@ -6,6 +6,9 @@ namespace GD.FSM
     [CreateAssetMenu(fileName = "Blackboard", menuName = "GD/FSM/Blackboard", order = 1)]
     public class Blackboard : ScriptableObject
     {
+        public int XP = 1;
+        public int Health = 100;
+
         private Dictionary<string, object> data = new();
 
         public void SetValue<T>(string key, T value) => data[key] = value;
