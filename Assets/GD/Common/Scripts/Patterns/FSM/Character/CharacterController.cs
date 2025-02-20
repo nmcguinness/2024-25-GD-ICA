@@ -26,8 +26,10 @@ namespace GD.FSM
 
             // 3. Connect the states
             stateMachine.AddTransition(idleState, patrolState,
+                new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 5));
 
             // 4. Set the initial state
+            stateMachine.SetState(idleState);
         }
     }
 }
