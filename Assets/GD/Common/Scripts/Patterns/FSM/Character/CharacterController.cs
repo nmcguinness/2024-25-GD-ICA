@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.AI;
 
 namespace GD.FSM
 {
@@ -9,6 +10,9 @@ namespace GD.FSM
 
         [SerializeField]
         private Animator animator;
+
+        [SerializeField]
+        private NavMeshAgent agent;
 
         private FiniteStateMachine stateMachine;
 
@@ -21,19 +25,19 @@ namespace GD.FSM
 
             // 2. Create the states
             var idleState = new IdleState(blackboard, this, animator);
-            var patrolState = new PatrolState(blackboard, this, animator);
+            var patrolState = new PatrolState(blackboard, this, animator, agent);
 
             // 3. Connect the states
             stateMachine.AddTransition(idleState, patrolState,
                 new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 2));
-            stateMachine.AddTransition(patrolState, idleState,
-               new FuncPredicate(() => patrolState.timer.ElapsedUpdateTime > 5));
+            //stateMachine.AddTransition(patrolState, idleState,
+            //   new FuncPredicate(() => patrolState.timer.ElapsedUpdateTime > 5));
 
             // 3a. Add the ANY transition states
-            var levelUpState = new LevelUpState(blackboard, this, animator);
+            //var levelUpState = new LevelUpState(blackboard, this, animator);
 
-            stateMachine.AddAnyTransition(levelUpState,
-                new FuncPredicate(() => blackboard.XP > 100));
+            //stateMachine.AddAnyTransition(levelUpState,
+            //    new FuncPredicate(() => blackboard.XP > 100));
 
             // 3b. Add composite predicate example
 
