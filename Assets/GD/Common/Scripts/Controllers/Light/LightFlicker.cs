@@ -24,7 +24,7 @@ public class LightFlicker : MonoBehaviour
 
     private float targetIntensity; // The current target intensity to lerp towards
     private float flickerSpeed; // The current speed of flicker
-    private float flickerTimer; // Timer to switch target intensity
+    private float flickerTimer; // Utility to switch target intensity
 
     private void Start()
     {

@@ -3,13 +3,13 @@ using UnityEngine.AI;
 
 namespace GD.FSM
 {
-    public class PatrolState : CharacterState
+    public class PatrolState : FSMCharacterState
     {
         private int WalkHash = Animator.StringToHash("Walk_N");
         private NavMeshAgent agent;
 
         public PatrolState(Blackboard blackboard,
-            CharacterController characterController, Animator animator,
+            FSMCharacterController characterController, Animator animator,
             NavMeshAgent agent)
             : base(blackboard, characterController, animator)
         {
@@ -21,8 +21,26 @@ namespace GD.FSM
             animator.CrossFade(WalkHash, 0.1f);
             base.OnEnter();
 
-            //get waypoint from bb
-            //agent.SetDestination(waypoint);
+            // Get waypoint
+            GetWaypoints();
+
+            // Set the destination
+            SetWaypoint();
+        }
+
+        private void SetWaypoint()
+        {
+            //TODO
+        }
+
+        private void GetWaypoints()
+        {
+            //TODO
+        }
+
+        public override void Update()
+        {
+            //TODO
         }
     }
 }

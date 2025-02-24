@@ -54,7 +54,7 @@ namespace GD.Tools
             Gizmos.DrawLine(endPoint, leftHead);
 
             //Draw the base of the arrowhead as a sphere
-            Gizmos.DrawSphere(transform.position, endSphereWidth);
+            Gizmos.DrawSphere(startPoint, endSphereWidth);
         }
     }
 }

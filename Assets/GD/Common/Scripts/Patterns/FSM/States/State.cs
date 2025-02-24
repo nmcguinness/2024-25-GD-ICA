@@ -8,7 +8,7 @@ namespace GD.FSM
         // Stores the reference to the blackboard used by the state
         protected Blackboard blackboard;
 
-        public Timer timer = new Timer();
+        public Timer timer;
 
         public State(Blackboard blackboard)
         {
@@ -20,8 +20,12 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnEnter()
         {
-            Debug.Log($"OnEnter: {GetType().Name} at {Time.time}");
-            timer.Start();
+            Debug.Log(message: $"OnEnter: {GetType().Name} at {Time.time}");
+
+            if (timer == null)
+                timer = new Timer(GetType().Name);
+
+            timer.Start(0);
         }
 
         /// <summary>
@@ -45,7 +49,7 @@ namespace GD.FSM
         /// </summary>
         public virtual void OnExit()
         {
-            Debug.Log($"OnExit: {GetType().Name} at {Time.time}");
+            Debug.Log(message: $"OnExit: {GetType().Name} at {Time.time}");
             timer.Stop();
         }
     }

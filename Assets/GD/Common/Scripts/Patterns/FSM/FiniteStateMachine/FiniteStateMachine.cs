@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GD.Utility;
+using System;
 using System.Collections.Generic;
 
 namespace GD.FSM
@@ -6,12 +7,19 @@ namespace GD.FSM
     /// <summary>
     /// Manages the state machine and transitions between states.
     /// </summary>
-    /// <see cref="Controllers.PlayerController"/>
+    /// <see cref="FSMCharacterController"/>
+    /// <seealso cref="TimeTickSystem"/>
     public class FiniteStateMachine
     {
         private StateNode current;
         private Dictionary<Type, StateNode> nodes = new();
         private HashSet<ITransition> anyTransitions = new();
+
+        public FiniteStateMachine()
+        {
+        }
+
+        #region Updating States
 
         public void Update()
         {
@@ -26,6 +34,24 @@ namespace GD.FSM
         {
             current.State?.FixedUpdate();
         }
+
+        //public void TickUpdate()
+        //{
+        //    var transition = GetTransition();
+        //    if (transition != null)
+        //        ChangeState(transition?.To);
+
+        //    current.State?.Update();
+        //}
+
+        //public void TickFixedUpdate()
+        //{
+        //    current.State?.FixedUpdate();
+        //}
+
+        #endregion Updating States
+
+        #region Adding, Setting, Changing States
 
         public void SetState(IState state)
         {
@@ -81,6 +107,10 @@ namespace GD.FSM
             return node;
         }
 
+        #endregion Adding, Setting, Changing States
+
+        #region StateNode wrapper
+
         private class StateNode
         {
             public IState State { get; }
@@ -97,5 +127,7 @@ namespace GD.FSM
                 Transitions.Add(new Transition(to, condition));
             }
         }
+
+        #endregion StateNode wrapper
     }
 }

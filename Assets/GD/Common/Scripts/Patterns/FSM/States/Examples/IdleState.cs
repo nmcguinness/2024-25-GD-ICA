@@ -2,12 +2,12 @@
 
 namespace GD.FSM
 {
-    public class IdleState : CharacterState
+    public class IdleState : FSMCharacterState
     {
         private int IdleHash = Animator.StringToHash("Idle");
 
         public IdleState(Blackboard blackboard,
-            CharacterController characterController, Animator animator)
+            FSMCharacterController characterController, Animator animator)
             : base(blackboard, characterController, animator)
         {
         }

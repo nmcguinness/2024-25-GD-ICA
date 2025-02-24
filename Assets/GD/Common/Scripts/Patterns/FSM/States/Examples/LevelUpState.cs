@@ -2,10 +2,10 @@
 
 namespace GD.FSM
 {
-    public class LevelUpState : CharacterState
+    public class LevelUpState : FSMCharacterState
     {
         public LevelUpState(Blackboard blackboard,
-            CharacterController characterController, Animator animator)
+            FSMCharacterController characterController, Animator animator)
             : base(blackboard, characterController, animator)
         {
         }
