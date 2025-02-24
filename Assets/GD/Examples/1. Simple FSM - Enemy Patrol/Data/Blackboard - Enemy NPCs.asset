@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   XP: 1
   Health: 100
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

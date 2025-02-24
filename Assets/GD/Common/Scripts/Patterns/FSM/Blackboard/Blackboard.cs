@@ -8,6 +8,7 @@ namespace GD.FSM
     {
         public int XP = 1;
         public int Health = 100;
+        public List<Transform> waypoints = new();
 
         private Dictionary<string, object> data = new();
 

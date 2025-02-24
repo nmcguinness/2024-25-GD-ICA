@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 namespace GD.FSM
 {
+    /// <summary>
+    /// Sets up thew FSM and provides access to blackboard, animator and navmesh agent.
+    /// </summary>
     public class FSMCharacterController : MonoBehaviour
     {
         [SerializeField]
