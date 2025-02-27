@@ -8,7 +8,7 @@ namespace GD
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "SO_GameObjectQueue", menuName = "GD/Types/Collections/Queue/Game Object", order = 7)]
-    public class SO_GameObjectQueue : SO_Queue<GameObject>
+    public class SO_GameObjectQueue : QueueSO<GameObject>
     {
     }
 }

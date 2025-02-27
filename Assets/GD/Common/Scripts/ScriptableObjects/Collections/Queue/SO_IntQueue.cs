@@ -8,7 +8,7 @@ namespace GD
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "SO_IntQueue", menuName = "GD/Types/Collections/Queue/Int", order = 2)]
-    public class SO_IntQueue : SO_Queue<int>
+    public class SO_IntQueue : QueueSO<int>
     {
     }
 }

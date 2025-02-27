@@ -8,7 +8,7 @@ namespace GD
 {
     [System.Serializable]
     [CreateAssetMenu(fileName = "SO_BoolQueue", menuName = "GD/Types/Collections/Queue/Bool", order = 1)]
-    public class SO_BoolQueue : SO_Queue<bool>
+    public class SO_BoolQueue : QueueSO<bool>
     {
     }
 }

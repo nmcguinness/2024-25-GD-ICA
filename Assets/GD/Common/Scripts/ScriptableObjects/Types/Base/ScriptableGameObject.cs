@@ -14,7 +14,7 @@ namespace GD.Types
 
         [SerializeField]
         [ContextMenuItem("Reset Name", "ResetName")]
-        [FoldoutGroup("Info", expanded: true)]
+        [FoldoutGroup("Info", expanded: false)]
         private new string name = string.Empty;
 
         [SerializeField]

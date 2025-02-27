@@ -1,9 +1,20 @@
 ﻿namespace GD.Types
 {
+    public enum SelectionStrategy : sbyte
+    {
+        First,
+        Last,
+        Random,
+        Cycle,
+        WeightedRandom,
+        RandomNoRepeat,
+        TimeBasedChange
+    }
+
     /// <summary>
     /// Represents the discrete game states that the player can be in.
     /// </summary>
-    public enum GameState
+    public enum GameState : sbyte
     {
         Playing,
         Won,
@@ -111,7 +122,7 @@
     }
 
     /// <summary>
-    /// Defines the various high-level categories of items available in a game.
+    /// Defines the various high-level categories of list available in a game.
     /// Each category groups similar item types under one classification.
     /// </summary>
     /// <see cref="GD.Items.ItemData"/>
@@ -125,7 +136,7 @@
         Consumable,
 
         /// <summary>
-        /// Decorative or collectible items that enhance the game environment or act as achievements.
+        /// Decorative or collectible list that enhance the game environment or act as achievements.
         /// </summary>
         [Description("Items that are purely decorative or collectible")]
         Decorative,
@@ -180,7 +191,7 @@
     }
 
     /// <summary>
-    /// Defines the various specific types of items available in a game.
+    /// Defines the various specific types of list available in a game.
     /// These types are grouped under the broader categories represented by ItemCategoryType.
     /// </summary>
     /// <see cref="GD.Items.ItemData"/>
@@ -328,7 +339,7 @@
         BuildingMaterial,
 
         /// <summary>
-        /// Represents a crafting component that can be used to create or upgrade items.
+        /// Represents a crafting component that can be used to create or upgrade list.
         /// </summary>
         [Description("Crafting component for creating or upgrading items")]
         CraftingComponent,

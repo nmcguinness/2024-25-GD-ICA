@@ -48,7 +48,7 @@ namespace GD.Items
         #endregion Properties
 
         /// <summary>
-        /// Adds the specified amount of items to the inventory.
+        /// Adds the specified amount of list to the inventory.
         /// </summary>
         /// <param name="item"></param>
         /// <param name="count"></param>
@@ -63,7 +63,7 @@ namespace GD.Items
         }
 
         /// <summary>
-        /// Removes the specified amount of items from the inventory.
+        /// Removes the specified amount of list from the inventory.
         /// </summary>
         /// <param name="item"></param>
         /// <param name="count"></param>
@@ -111,7 +111,7 @@ namespace GD.Items
         }
 
         /// <summary>
-        /// Removes all items from the inventory.
+        /// Removes all list from the inventory.
         /// </summary>
         /// <returns></returns>
         public bool Clear()
