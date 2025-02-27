@@ -12,6 +12,9 @@ namespace GD.FSM.SO
         [SerializeField]
         private ScriptableAction[] actions;
 
+        [SerializeField]
+        private ScriptableTransition[] transitions;
+
         private Timer timer;
 
         /// <summary>
@@ -23,6 +26,9 @@ namespace GD.FSM.SO
                 timer = new Timer(GetType().Name);
 
             timer.Start(0);
+
+            for (int i = 0; i < actions.Length; i++)
+                actions[i].OnEnter(stateController);
         }
 
         /// <summary>
@@ -41,6 +47,9 @@ namespace GD.FSM.SO
         /// </summary>
         public virtual void OnExit(ScriptableStateController stateController)
         {
+            for (int i = 0; i < actions.Length; i++)
+                actions[i].OnExit(stateController);
+
             timer.Stop();
         }
     }

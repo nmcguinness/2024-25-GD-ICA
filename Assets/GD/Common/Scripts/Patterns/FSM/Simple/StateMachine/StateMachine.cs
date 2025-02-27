@@ -75,11 +75,11 @@ namespace GD.FSM.Simple
         private ITransition GetTransition()
         {
             foreach (var transition in anyTransitions)
-                if (transition.Condition.Evaluate())
+                if (transition.Predicate.Evaluate())
                     return transition;
 
             foreach (var transition in current.Transitions)
-                if (transition.Condition.Evaluate())
+                if (transition.Predicate.Evaluate())
                     return transition;
 
             return null;

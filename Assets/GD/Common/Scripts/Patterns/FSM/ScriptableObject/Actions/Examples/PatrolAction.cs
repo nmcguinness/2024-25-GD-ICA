@@ -5,14 +5,21 @@ namespace GD.FSM.SO
     [CreateAssetMenu(fileName = "PatrolAction", menuName = "GD/FSM/Scriptable/Action/Patrol")]
     public class PatrolAction : ScriptableAction
     {
-        public override void OnUpdate(ScriptableStateController stateController)
+        //TODO: Finish this!
+
+        public override void OnEnter(ScriptableStateController stateController)
         {
-            Patrol(stateController);
+            //TODO: Implement animation logic
         }
 
-        private void Patrol(ScriptableStateController stateController)
+        public override void OnUpdate(ScriptableStateController stateController)
         {
             //TODO: Implement patrol logic
+        }
+
+        public override void OnExit(ScriptableStateController stateController)
+        {
+            //noop
         }
     }
 }

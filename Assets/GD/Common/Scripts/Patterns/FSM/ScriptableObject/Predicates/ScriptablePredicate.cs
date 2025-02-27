@@ -1,10 +1,8 @@
-﻿using GD.Types;
-using System;
+﻿using UnityEngine;
 
 namespace GD.FSM.SO
 {
-    [Serializable]
-    public abstract class ScriptablePredicate : ScriptableGameObject
+    public abstract class ScriptablePredicate : ScriptableObject
     {
         public abstract bool Evaluate(ScriptableStateController controller);
     }

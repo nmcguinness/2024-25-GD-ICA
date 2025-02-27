@@ -1,12 +1,22 @@
 ﻿using System;
+using UnityEngine;
 
 namespace GD.FSM.SO
 {
     [Serializable]
-    public abstract class ScriptableTransition
+    public class ScriptableTransition
     {
-        public ScriptablePredicate Condition { get; }
-        public ScriptableState TrueState { get; set; }
-        public ScriptableState FalseState { get; set; }
+        [SerializeField]
+        private ScriptablePredicate predicate;
+
+        [SerializeField]
+        private ScriptableState trueState;
+
+        [SerializeField]
+        private ScriptableState falseState;
+
+        public ScriptablePredicate Predicate { get => predicate; set => predicate = value; }
+        public ScriptableState TrueState { get => trueState; set => trueState = value; }
+        public ScriptableState FalseState { get => falseState; set => falseState = value; }
     }
 }

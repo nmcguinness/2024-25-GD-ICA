@@ -8,6 +8,6 @@ namespace GD.FSM.Simple
     public interface ITransition
     {
         IState To { get; }
-        IPredicate Condition { get; }
+        IPredicate Predicate { get; }
     }
 }

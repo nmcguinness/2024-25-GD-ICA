@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7d685afa3f7ab48b1ccb81371021dc, type: 3}
   m_Name: Blackboard - Enemy NPCs
   m_EditorClassIdentifier: 
+  name: 
+  description: 
   XP: 1
   Health: 100
   waypoints:
