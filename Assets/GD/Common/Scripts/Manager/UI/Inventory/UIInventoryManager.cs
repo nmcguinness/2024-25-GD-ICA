@@ -75,7 +75,7 @@ namespace GD.UI
         /// Called when the inventory changes
         /// </summary>
         /// We could solve the update problem with
-        /// 1. Update
+        /// 1. UpdateState
         /// 2. HandleTicks (i.e, 0.1, 0.2, 0.4, 0.8)
         /// 3. Persistent polling ("have you changed?")
         /// 4. Event-driven ("I'll tell you when I change")

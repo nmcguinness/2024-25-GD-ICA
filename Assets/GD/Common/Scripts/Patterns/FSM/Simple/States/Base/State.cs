@@ -40,7 +40,7 @@ namespace GD.FSM.Simple
         /// <summary>
         /// Used for states that relate to game logic or other variable time updates.
         /// </summary>
-        public virtual void Update()
+        public virtual void UpdateState()
         {
             timer.Update();
         }
@@ -48,7 +48,7 @@ namespace GD.FSM.Simple
         /// <summary>
         /// Used for states that relate to physics or other fixed time updates.
         /// </summary>
-        public virtual void FixedUpdate()
+        public virtual void FixedUpdateState()
         {
             timer.FixedUpdate();
         }

@@ -31,7 +31,7 @@ namespace GD.FSM.Simple
             agent.SetDestination(waypoints[currentWaypointIndex].position);
         }
 
-        public override void Update()
+        public override void UpdateState()
         {
             // Am I there yet? If yes, get next
             if (agent.remainingDistance <= agent.stoppingDistance && !agent.pathPending)

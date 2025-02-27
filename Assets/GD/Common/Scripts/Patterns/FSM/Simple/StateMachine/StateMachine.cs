@@ -28,12 +28,12 @@ namespace GD.FSM.Simple
             if (transition != null)
                 ChangeState(transition.To);
 
-            current.State?.Update();
+            current.State?.UpdateState();
         }
 
         public void FixedUpdate()
         {
-            current.State?.FixedUpdate();
+            current.State?.FixedUpdateState();
         }
 
         //public void TickUpdate()
@@ -42,12 +42,12 @@ namespace GD.FSM.Simple
         //    if (transition != null)
         //        ChangeState(transition?.To);
 
-        //    current.State?.Update();
+        //    current.State?.UpdateState();
         //}
 
         //public void TickFixedUpdate()
         //{
-        //    current.State?.FixedUpdate();
+        //    current.State?.FixedUpdateState();
         //}
 
         #endregion Updating States

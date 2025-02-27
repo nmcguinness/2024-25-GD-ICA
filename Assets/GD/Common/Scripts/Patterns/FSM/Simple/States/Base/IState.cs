@@ -7,9 +7,9 @@ namespace GD.FSM.Simple
     {
         void OnEnter();
 
-        void Update();
+        void UpdateState();
 
-        void FixedUpdate();
+        void FixedUpdateState();
 
         void OnExit();
     }
