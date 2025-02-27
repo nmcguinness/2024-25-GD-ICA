@@ -1,10 +1,11 @@
+using GD.Types;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace GD.FSM
 {
     [CreateAssetMenu(fileName = "Blackboard", menuName = "GD/FSM/Blackboard", order = 1)]
-    public class Blackboard : ScriptableObject
+    public class Blackboard : ScriptableGameObject
     {
         public int XP = 1;
         public int Health = 100;

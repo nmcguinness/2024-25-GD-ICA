@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 namespace GD.FSM.Simple
 {
-    public class PatrolState : FSMCharacterState
+    public class PatrolState : State
     {
         private int WalkHash = Animator.StringToHash("Walk_N");
         private NavMeshAgent agent;
@@ -12,7 +12,7 @@ namespace GD.FSM.Simple
         private int currentWaypointIndex = 0;
 
         public PatrolState(Blackboard blackboard,
-            FSMCharacterController characterController, Animator animator,
+            StateController characterController, Animator animator,
             NavMeshAgent agent)
             : base(blackboard, characterController, animator)
         {
