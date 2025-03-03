@@ -1,20 +1,34 @@
-﻿using System;
+﻿using GD.Types;
+using Sirenix.OdinInspector;
+using System;
 using UnityEngine;
 
 namespace GD.FSM.SO
 {
     [Serializable]
     [CreateAssetMenu(fileName = "ScriptableState", menuName = "GD/FSM/Scriptable/State")]
-    public class ScriptableState : ScriptableObject
+    public class ScriptableState : ScriptableGameObject
     {
+        #region Fields
+
+        [FoldoutGroup("Actions & Transitions", expanded: true)]
         [SerializeField]
         protected ScriptableAction[] actions;
 
+        [FoldoutGroup("Actions & Transitions")]
         [SerializeField]
         protected ScriptableTransition[] transitions;
 
+        #endregion Fields
+
+        #region Properties
+
         public ScriptableAction[] Actions { get => actions; }
         public ScriptableTransition[] Transitions { get => transitions; }
+
+        #endregion Properties
+
+        #region Methods
 
         /// <summary>
         /// Called when the state is entered.
@@ -42,5 +56,7 @@ namespace GD.FSM.SO
             for (int i = 0; i < actions.Length; i++)
                 actions[i].OnExit(stateController);
         }
+
+        #endregion Methods
     }
 }

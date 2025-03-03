@@ -12,9 +12,13 @@ namespace GD.Types
     {
         #region Fields
 
+        [FoldoutGroup("Info", expanded: false)]
+        [SerializeField, Tooltip("Unique identifier for this object."), ReadOnly]
+        private string uniqueID;
+
         [SerializeField]
         [ContextMenuItem("Reset Name", "ResetName")]
-        [FoldoutGroup("Info", expanded: false)]
+        [FoldoutGroup("Info")]
         private new string name = string.Empty;
 
         [SerializeField]
@@ -23,19 +27,15 @@ namespace GD.Types
         [FoldoutGroup("Info")]
         private string description = string.Empty;
 
-        [FoldoutGroup("Info")]
-        [SerializeField, Tooltip("Unique identifier for this object."), ReadOnly]
-        private string uniqueID;
-
         #endregion Fields
 
         #region Properties
 
+        public string UniqueID { get => uniqueID; }
+
         public string Name { get => name; set => name = value; }
 
         public string Description { get => description; set => description = value; }
-
-        public string UniqueID { get => uniqueID; set => uniqueID = value; }
 
         #endregion Properties
 
@@ -69,14 +69,6 @@ namespace GD.Types
         public void ResetDescription()
         {
             Description = string.Empty;
-        }
-
-        /// <summary>
-        /// Resets the unique ID to an empty string
-        /// </summary>
-        public void ResetUniqueID()
-        {
-            UniqueID = string.Empty;
         }
 
         /// <summary>

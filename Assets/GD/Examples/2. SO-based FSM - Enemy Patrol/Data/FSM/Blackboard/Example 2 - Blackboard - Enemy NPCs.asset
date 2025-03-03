@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c7d685afa3f7ab48b1ccb81371021dc, type: 3}
-  m_Name: Blackboard - Enemy NPCs
+  m_Name: Example 2 - Blackboard - Enemy NPCs
   m_EditorClassIdentifier: 
   name: 
   description: 
