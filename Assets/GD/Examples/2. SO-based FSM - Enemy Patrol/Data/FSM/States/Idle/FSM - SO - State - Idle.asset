@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43086236b21b7024a82f671e6ff4de7d, type: 3}
   m_Name: FSM - SO - State - Idle
   m_EditorClassIdentifier: 
+  uniqueID: 8abfc882-4c7d-4d02-80a3-31435a4f0c0c
+  name: 
+  description: 
   actions:
   - {fileID: 11400000, guid: e2a75090e8a28c04cb87ee94adbd6a75, type: 2}
   transitions:

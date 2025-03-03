@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43086236b21b7024a82f671e6ff4de7d, type: 3}
   m_Name: FSM - SO - State - Patrol
   m_EditorClassIdentifier: 
+  uniqueID: 2b73fb25-54fe-4341-b132-00be04739e43
+  name: 
+  description: 
   actions:
   - {fileID: 11400000, guid: 9b07fad943607b840836903c148aed86, type: 2}
   transitions:
