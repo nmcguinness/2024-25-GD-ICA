@@ -17,20 +17,17 @@ namespace GD.FSM.SO
         {
             base.OnEnter(stateController);
 
-            if (waypoints == null)
+            if (!stateController.Blackboard.HasValue(waypointsKey))
             {
-                if (!stateController.Blackboard.HasValue(waypointsKey))
-                {
-                    Debug.LogWarning($"No waypoints found in blackboard under key: {waypointsKey}");
-                    return;
-                }
+                Debug.LogWarning($"No waypoints found in blackboard under key: {waypointsKey}");
+                return;
+            }
 
-                waypoints = stateController.Blackboard.GetValue<List<Transform>>(waypointsKey);
-                if (waypoints == null || waypoints.Count == 0)
-                {
-                    Debug.LogWarning("Waypoint list is empty.");
-                    return;
-                }
+            waypoints = stateController.Blackboard.GetValue<List<Transform>>(waypointsKey);
+            if (waypoints == null || waypoints.Count == 0)
+            {
+                Debug.LogWarning("Waypoint list is empty.");
+                return;
             }
 
             MoveToNextWaypoint(stateController);
@@ -40,9 +37,6 @@ namespace GD.FSM.SO
         public override void OnUpdate(ScriptableStateController stateController)
         {
             base.OnUpdate(stateController);
-
-            if (waypoints == null || waypoints.Count == 0)
-                return;
 
             NavMeshAgent agent = stateController.Agent;
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
@@ -54,17 +48,7 @@ namespace GD.FSM.SO
 
         private void MoveToNextWaypoint(ScriptableStateController stateController)
         {
-            if (waypoints == null || waypoints.Count == 0)
-                return;
-
-            NavMeshAgent agent = stateController.Agent;
-            if (agent == null)
-            {
-                Debug.LogError("NavMeshAgent not found on state controller.");
-                return;
-            }
-
-            agent.SetDestination(waypoints[currentWaypointIndex].position);
+            stateController.Agent.SetDestination(waypoints[currentWaypointIndex].position);
         }
     }
 }

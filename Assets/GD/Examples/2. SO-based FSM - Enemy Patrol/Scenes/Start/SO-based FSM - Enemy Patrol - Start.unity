@@ -723,8 +723,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.37623358, y: 0.25453776, z: -0.10842083, w: -0.8842532}
-  m_LocalPosition: {x: 5.675724, y: 7.9276705, z: -5.3285265}
+  m_LocalRotation: {x: -0.1885663, y: 0.33549747, z: -0.06911425, w: -0.9203844}
+  m_LocalPosition: {x: 5.517112, y: 2.6033497, z: -4.4124384}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1071,9 +1071,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d23903b6b80414e40b01b68a2f320bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialState: {fileID: 11400000, guid: 80b086ff7fe9b70488df1353b81f81e8, type: 2}
+  initialState: {fileID: 11400000, guid: d0d00a63326224648a16adeb68f8ad92, type: 2}
   states:
-  - {fileID: 11400000, guid: 80b086ff7fe9b70488df1353b81f81e8, type: 2}
+  - {fileID: 11400000, guid: d0d00a63326224648a16adeb68f8ad92, type: 2}
+  - {fileID: 11400000, guid: faae54037c8867e40aa5b81423b97ae4, type: 2}
   optionalInterruptionTransitions: []
 --- !u!114 &1617550338
 MonoBehaviour:

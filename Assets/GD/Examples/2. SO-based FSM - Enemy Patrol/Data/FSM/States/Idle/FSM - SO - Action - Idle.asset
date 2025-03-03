@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationName: Idle
   crossFadeTime: 0.1
+  animationHash: 0

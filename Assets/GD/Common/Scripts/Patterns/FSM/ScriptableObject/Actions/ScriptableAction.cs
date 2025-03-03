@@ -4,6 +4,8 @@ namespace GD.FSM.SO
 {
     public abstract class ScriptableAction : ScriptableObject
     {
+        public abstract void Initialize();
+
         public virtual void OnEnter(ScriptableStateController stateController)
         {
             Debug.Log($"{GetType().Name}.OnEnter at {Time.time} with stateController [{stateController}]");

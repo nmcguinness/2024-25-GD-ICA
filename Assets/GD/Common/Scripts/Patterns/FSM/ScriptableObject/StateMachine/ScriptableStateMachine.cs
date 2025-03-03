@@ -53,6 +53,10 @@ namespace GD.FSM.SO
                 return;
             }
 
+            foreach (var state in states)
+                foreach (var action in state.Actions)
+                    action.Initialize();
+
             currentState = initialState;
             currentState.OnEnter(stateController);
         }

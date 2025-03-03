@@ -18,6 +18,6 @@ MonoBehaviour:
   actions:
   - {fileID: 11400000, guid: e2a75090e8a28c04cb87ee94adbd6a75, type: 2}
   transitions:
-  - predicate: {fileID: 0}
+  - predicate: {fileID: 11400000, guid: e695b9352efbffd4995b79f5e13bd7ee, type: 2}
     trueState: {fileID: 11400000, guid: faae54037c8867e40aa5b81423b97ae4, type: 2}
     falseState: {fileID: 11400000}
