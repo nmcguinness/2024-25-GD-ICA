@@ -1,7 +1,5 @@
-﻿using GD.FSM;
-using GD.Types;
+﻿using GD.Types;
 using Sirenix.OdinInspector;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace GD.Items

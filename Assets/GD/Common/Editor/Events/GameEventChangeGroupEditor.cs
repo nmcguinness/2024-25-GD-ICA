@@ -11,27 +11,31 @@ public class GameEventChangeGroupEditor : PropertyDrawer
     public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
         EditorGUI.BeginProperty(position, label, property);
-
-        float buttonHeight = 20;
-        Rect fieldRect = new Rect(position.x, position.y, position.width, position.height - buttonHeight);
-        Rect buttonRect = new Rect(position.x, position.y + position.height - buttonHeight, position.width, buttonHeight);
-
-        EditorGUIUtility.wideMode = true;
-        EditorGUI.PropertyField(fieldRect, property, label, true);
-
-        if (GUI.Button(buttonRect, "Generate Events"))
+        try
         {
-            string definingClassName = GetDefiningClassName(property); ;
-            string scriptableObjectPath = GetScriptableObjectPath(property);
+            float buttonHeight = 20;
+            Rect fieldRect = new Rect(position.x, position.y, position.width, position.height - buttonHeight);
+            Rect buttonRect = new Rect(position.x, position.y + position.height - buttonHeight, position.width, buttonHeight);
 
-            string folder = EditorUtility.SaveFolderPanel("Select Folder to Save Events", scriptableObjectPath, "");
-            if (!string.IsNullOrEmpty(folder))
+            EditorGUIUtility.wideMode = true;
+            EditorGUI.PropertyField(fieldRect, property, label, true);
+
+            if (GUI.Button(buttonRect, "Generate Events"))
             {
-                GenerateEvents(property, folder, definingClassName);
+                string definingClassName = GetDefiningClassName(property);
+                string scriptableObjectPath = GetScriptableObjectPath(property);
+
+                string folder = EditorUtility.SaveFolderPanel("Select Folder to Save Events", scriptableObjectPath, "");
+                if (!string.IsNullOrEmpty(folder))
+                {
+                    GenerateEvents(property, folder, definingClassName);
+                }
             }
         }
-
-        EditorGUI.EndProperty();
+        finally
+        {
+            EditorGUI.EndProperty();
+        }
     }
 
     private void GenerateEvents(SerializedProperty property, string folderPath, string className)
@@ -39,7 +43,11 @@ public class GameEventChangeGroupEditor : PropertyDrawer
         string relativePath = "Assets" + folderPath.Substring(Application.dataPath.Length);
         object changeEventsInstance = GetTargetObjectWithProperty(property);
 
-        if (changeEventsInstance == null) return;
+        if (changeEventsInstance == null)
+        {
+            Debug.LogError("GenerateEvents: Target object is null.");
+            return;
+        }
 
         FieldInfo[] eventFields = changeEventsInstance.GetType()
             .GetFields(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
@@ -48,11 +56,12 @@ public class GameEventChangeGroupEditor : PropertyDrawer
 
         foreach (var field in eventFields)
         {
-            string eventName = $"{className} - {field.Name}"; // ✅ Name format: Blackboard - OnAdded
+            string eventName = $"{className} - {field.Name}";
             GameEvent newEvent = CreateEventAsset(eventName, relativePath);
 
-            // Assign the new event to the field in ChangeEvents
+            Undo.RecordObject(property.serializedObject.targetObject, "Assign Generated Events");
             field.SetValue(changeEventsInstance, newEvent);
+            EditorUtility.SetDirty(property.serializedObject.targetObject);
         }
 
         property.serializedObject.ApplyModifiedProperties();
@@ -64,6 +73,7 @@ public class GameEventChangeGroupEditor : PropertyDrawer
     {
         GameEvent newEvent = ScriptableObject.CreateInstance<GameEvent>();
         string path = Path.Combine(folderPath, $"{eventName}.asset");
+
         AssetDatabase.CreateAsset(newEvent, path);
         return AssetDatabase.LoadAssetAtPath<GameEvent>(path);
     }
@@ -80,12 +90,6 @@ public class GameEventChangeGroupEditor : PropertyDrawer
         return fieldInfo != null ? property.serializedObject.targetObject.GetType().Name : "Unknown";
     }
 
-    private string GetParentClassName(SerializedProperty property)
-    {
-        object targetObject = GetTargetObjectWithProperty(property);
-        return targetObject?.GetType().Name ?? "Unknown"; // ✅ Returns "Blackboard" instead of "ChangeEvents"
-    }
-
     private string GetScriptableObjectPath(SerializedProperty property)
     {
         ScriptableObject scriptableObject = property.serializedObject.targetObject as ScriptableObject;
@@ -97,16 +101,32 @@ public class GameEventChangeGroupEditor : PropertyDrawer
 
     private object GetTargetObjectWithProperty(SerializedProperty property)
     {
+        if (property == null || property.serializedObject == null)
+        {
+            Debug.LogError("SerializedProperty is null or invalid.");
+            return null;
+        }
+
         string path = property.propertyPath.Replace(".Array.data[", "[");
         object obj = property.serializedObject.targetObject;
         string[] elements = path.Split('.');
 
         foreach (string element in elements)
         {
+            if (obj == null)
+            {
+                Debug.LogError($"Null encountered while resolving path: {path}");
+                return null;
+            }
+
             if (element.Contains("["))
             {
                 string elementName = element.Substring(0, element.IndexOf("["));
-                int index = int.Parse(element.Substring(element.IndexOf("[")).Replace("[", "").Replace("]", ""));
+                if (!int.TryParse(element.Substring(element.IndexOf("[")).Replace("[", "").Replace("]", ""), out int index))
+                {
+                    Debug.LogError($"Failed to parse index from: {element}");
+                    return null;
+                }
                 obj = GetValueAtIndex(obj, elementName, index);
             }
             else

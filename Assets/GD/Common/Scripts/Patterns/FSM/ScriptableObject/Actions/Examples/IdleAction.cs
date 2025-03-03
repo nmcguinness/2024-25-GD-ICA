@@ -3,8 +3,12 @@
 namespace GD.FSM.SO
 {
     [CreateAssetMenu(fileName = "IdleAction", menuName = "GD/FSM/Scriptable/Action/Idle")]
-    public class IdleAction : ScriptableAction
+    public class IdleAction : ScriptableAnimatedAction
     {
-        //TODO: Finish this!
+        public override void OnEnter(ScriptableStateController stateController)
+        {
+            base.OnEnter(stateController);
+            PlayAnimation(stateController);
+        }
     }
 }

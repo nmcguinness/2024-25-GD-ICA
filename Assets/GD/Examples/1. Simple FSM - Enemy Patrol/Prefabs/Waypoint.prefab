@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waypointData: {fileID: 11400000, guid: e98a6b2043810034186afee9a6111561, type: 2}
-  blackboard: {fileID: 11400000, guid: e59f310bab4192645b673ed17de85cf4, type: 2}
-  onVisit: {fileID: 11400000, guid: 72e094e748ddf7a4d9db182997662247, type: 2}
+  blackboard: {fileID: 11400000, guid: ad8d455647eb9724eb699f58d4d979ec, type: 2}
+  onVisit: {fileID: 11400000, guid: c9aed00071721be4795542cd69961b2c, type: 2}
   targetLayer:
     serializedVersion: 2
     m_Bits: 192

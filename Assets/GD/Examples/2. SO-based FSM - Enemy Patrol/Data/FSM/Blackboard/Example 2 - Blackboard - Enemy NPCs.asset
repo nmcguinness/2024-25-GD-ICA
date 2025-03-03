@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c7d685afa3f7ab48b1ccb81371021dc, type: 3}
   m_Name: Example 2 - Blackboard - Enemy NPCs
   m_EditorClassIdentifier: 
+  uniqueID: 1ea05b57-c0e3-46d0-b913-4c3d0ef3fdde
   name: 
   description: 
-  uniqueID: 1ea05b57-c0e3-46d0-b913-4c3d0ef3fdde
   data:
     entries: []
   onChange:
-    onAdded: {fileID: 0}
-    onUpdated: {fileID: 0}
-    onRemoved: {fileID: 0}
+    onAdded: {fileID: 11400000, guid: ef1bb7922b858484788b7937c17dd375, type: 2}
+    onUpdated: {fileID: 11400000, guid: 0ecc03119bceb5f49b73109833b5aef0, type: 2}
+    onRemoved: {fileID: 11400000, guid: ee2115bdc41037649a284ca3585d25e4, type: 2}
