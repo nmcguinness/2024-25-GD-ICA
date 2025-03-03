@@ -1,6 +1,6 @@
 sceneSetups:
-- path: Assets/GD/Examples/1. Simple FSM - Enemy Patrol/Scenes/Start/Simple FSM -
-    Enemy Patrol - Start.unity
+- path: Assets/GD/Examples/2. SO-based FSM - Enemy Patrol/Scenes/Start/SO-based FSM
+    - Enemy Patrol - Start.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

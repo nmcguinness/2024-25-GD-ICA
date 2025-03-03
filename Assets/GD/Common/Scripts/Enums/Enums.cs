@@ -1,13 +1,152 @@
-﻿namespace GD.Types
+﻿using System;
+
+namespace GD.Types
 {
+    /// <summary>
+    /// Represents the various types of waypoints that can be used in the game.
+    /// </summary>
+    public enum WaypointType
+    {
+        [Description("Waypoint designated for setting up an ambush.")]
+        Ambush,
+
+        [Description("Waypoint indicating an alert or investigation state.")]
+        Alert,
+
+        [Description("Waypoint marking an attack or combat position.")]
+        Attack,
+
+        [Description("Waypoint designating a defensive position.")]
+        Defend,
+
+        [Description("Waypoint marking an area to explore.")]
+        Explore,
+
+        [Description("Waypoint used when the entity needs to flee from danger.")]
+        Flee,
+
+        [Description("Waypoint where the entity idles without specific orders.")]
+        Idle,
+
+        [Description("Waypoint indicating a location to investigate suspicious activity.")]
+        Investigate,
+
+        [Description("Waypoint where the entity interacts with an object or environment.")]
+        Interact,
+
+        [Description("Waypoint used for patrolling behavior.")]
+        Patrol,
+
+        [Description("Waypoint for meeting or rendezvousing with allies.")]
+        Rendezvous,
+
+        [Description("Waypoint where the entity rests or idles.")]
+        Rest,
+
+        [Description("Waypoint to seek cover from enemy fire or hazards.")]
+        SeekCover
+    }
+
+    /// <summary>
+    /// Represents the various types of NPC units that can be found in the game.
+    /// </summary>
+    [Flags]
+    public enum UnitType
+    {
+        [Description("No specific NPC type selected.")]
+        None = 0,
+
+        [Description("Friendly AI that assists the player.")]
+        Ally = 1 << 0,
+
+        [Description("Civilians who roam the world and interact with the environment.")]
+        Civilian = 1 << 1,
+
+        [Description("Hostile enemies that attack the player and allies.")]
+        Enemy = 1 << 2,
+
+        [Description("Guards who patrol specific areas and respond to threats.")]
+        Guard = 1 << 3,
+
+        [Description("Merchants that trade items, weapons, or resources.")]
+        Merchant = 1 << 4,
+
+        [Description("Workers performing tasks like farming, crafting, or mining.")]
+        Worker = 1 << 5,
+
+        [Description("Engineers who repair structures, vehicles, or weapons.")]
+        Engineer = 1 << 6,
+
+        [Description("Quest-giving NPCs who provide objectives and rewards.")]
+        QuestGiver = 1 << 7,
+
+        [Description("NPCs that act as vendors in various shops.")]
+        Shopkeeper = 1 << 8,
+
+        [Description("NPCs that provide transportation services, such as ferry or taxi drivers.")]
+        Transporter = 1 << 9,
+
+        [Description("Elite bosses with stronger abilities and unique AI behaviors.")]
+        Boss = 1 << 10,
+
+        [Description("Random travelers or wanderers moving between locations.")]
+        Wanderer = 1 << 11,
+
+        [Description("Wild animals that interact with the environment and players.")]
+        Wildlife = 1 << 12
+    }
+
+    /// <summary>
+    /// Represents the possible buff types that can be applied to a player or object when using a consumable item.
+    /// </summary>
+    public enum BuffType : sbyte
+    {
+        [Description("Boosts attack damage for a short duration.")]
+        AttackBoost,
+
+        [Description("Reduces damage taken for a short duration.")]
+        DamageReduction,
+
+        [Description("Temporarily increases defense.")]
+        DefenseBoost,
+
+        [Description("Regenerates health over time.")]
+        HealthRegen,
+
+        [Description("Increases jump height.")]
+        JumpBoost,
+
+        [Description("Increases movement speed temporarily.")]
+        SpeedBoost,
+
+        [Description("Improves stamina regeneration.")]
+        StaminaRegen
+    }
+
+    /// <summary>
+    /// Represents the various types of selection strategies that can be used to choose an item from a list.
+    /// </summary>
     public enum SelectionStrategy : sbyte
     {
+        [Description("Select the first item in the list.")]
         First,
+
+        [Description("Select the last item in the list.")]
         Last,
+
+        [Description("Select a random item from the list.")]
         Random,
+
+        [Description("Cycle sequentially through the list.")]
         Cycle,
+
+        [Description("Select a random item based on assigned weights.")]
         WeightedRandom,
+
+        [Description("Select a random item ensuring no repeats until all items have been selected.")]
         RandomNoRepeat,
+
+        [Description("Select an item based on elapsed time intervals.")]
         TimeBasedChange
     }
 

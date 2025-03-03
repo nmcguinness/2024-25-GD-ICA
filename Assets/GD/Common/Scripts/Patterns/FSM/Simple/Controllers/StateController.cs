@@ -9,6 +9,8 @@ namespace GD.FSM.Simple
     /// </summary>
     public class StateController : MonoBehaviour
     {
+        private StateMachine stateMachine;
+
         [SerializeField]
         private Blackboard blackboard;
 
@@ -18,7 +20,9 @@ namespace GD.FSM.Simple
         [SerializeField]
         private NavMeshAgent agent;
 
-        private StateMachine stateMachine;
+        public Blackboard Blackboard { get => blackboard; }
+        public Animator Animator { get => animator; }
+        public NavMeshAgent Agent { get => agent; }
 
         private void Awake() => InitialiseFiniteStateMachine();
 
@@ -27,19 +31,22 @@ namespace GD.FSM.Simple
             // 1. Create the FSM
             stateMachine = new StateMachine();
 
+            //  var name = selectionStrategy.GetItem(animations);
+
             // 2. Create the states
             var idleState = new IdleState(blackboard, this, animator);
-            var patrolState = new PatrolState(blackboard, this, animator, agent);
+            var patrolState = new PatrolState(blackboard, this, animator, agent,
+                "Walk_N");
 
             // 3. Connect the states
             stateMachine.AddTransition(idleState, patrolState,
                 new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 2));
 
             // 3a. Add the ANY transition states
-            var levelUpState = new LevelUpState(blackboard, this, animator);
+            //var levelUpState = new LevelUpState(blackboard, this, animator);
 
-            stateMachine.AddAnyTransition(levelUpState,
-                new FuncPredicate(() => blackboard.XP > 100));
+            //stateMachine.AddAnyTransition(levelUpState,
+            //    new FuncPredicate(() => blackboard.XP > 100));
 
             // 3b. Add composite predicate example
 
@@ -47,19 +54,14 @@ namespace GD.FSM.Simple
             stateMachine.SetState(idleState);
         }
 
-        //public void Anonymous(Blackboard b)
-        //{
-        //    return blackboard.XP > 100;
-        //}
-
         private void FixedUpdate()
         {
-            stateMachine.Update();
+            stateMachine.FixedUpdate();
         }
 
         private void Update()
         {
-            stateMachine.FixedUpdate();
+            stateMachine.Update();
         }
     }
 }

@@ -7,6 +7,6 @@ namespace GD.Items
     /// </summary>
     public interface IEquippable
     {
-        void Equip(GameObject equipper);
+        void Equip(GameObject equippee);
     }
 }

@@ -478,10 +478,12 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.34f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/GD/Common/Editor/Events/GameEventChangeGroupEditor.cs"
 "Assets/GD/Common/Editor/Hierarchy/HierarchyWindowGroupHeader.cs"
 "Assets/GD/Common/Editor/Inspector/ReadOnlyPropertyDrawer.cs"
 "Assets/GD/Common/Editor/Inspector/RequireInterfaceDrawer.cs"
 "Assets/GD/Common/Editor/Inspector/ToggleInspectorLock.cs"
+"Assets/GD/Common/Editor/SerializableDictionaryDrawer .cs"
 "Assets/GD/Common/Editor/Tools/CreateFolders.cs"
 -langversion:9.0
 /deterministic

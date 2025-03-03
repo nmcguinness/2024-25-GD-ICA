@@ -23,6 +23,10 @@ namespace GD.Types
         [FoldoutGroup("Info")]
         private string description = string.Empty;
 
+        [FoldoutGroup("Info")]
+        [SerializeField, Tooltip("Unique identifier for this object."), ReadOnly]
+        private string uniqueID;
+
         #endregion Fields
 
         #region Properties
@@ -31,9 +35,25 @@ namespace GD.Types
 
         public string Description { get => description; set => description = value; }
 
+        public string UniqueID { get => uniqueID; set => uniqueID = value; }
+
         #endregion Properties
 
         #region Core Methods
+
+        /// <summary>
+        /// Automatically generates a unique ID using a GUID if one isn't already set.
+        /// </summary>
+        private void OnValidate()
+        {
+            if (string.IsNullOrEmpty(uniqueID))
+            {
+                uniqueID = System.Guid.NewGuid().ToString();
+#if UNITY_EDITOR
+                UnityEditor.EditorUtility.SetDirty(this);
+#endif
+            }
+        }
 
         /// <summary>
         /// Resets the name to an empty string
@@ -49,6 +69,14 @@ namespace GD.Types
         public void ResetDescription()
         {
             Description = string.Empty;
+        }
+
+        /// <summary>
+        /// Resets the unique ID to an empty string
+        /// </summary>
+        public void ResetUniqueID()
+        {
+            UniqueID = string.Empty;
         }
 
         /// <summary>

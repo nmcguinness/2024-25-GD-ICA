@@ -1,6 +1,4 @@
-﻿using GD.Types;
-using GD.Utility;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace GD.FSM.SO
@@ -10,23 +8,19 @@ namespace GD.FSM.SO
     public class ScriptableState : ScriptableObject
     {
         [SerializeField]
-        private ScriptableAction[] actions;
+        protected ScriptableAction[] actions;
 
         [SerializeField]
-        private ScriptableTransition[] transitions;
+        protected ScriptableTransition[] transitions;
 
-        private Timer timer;
+        public ScriptableAction[] Actions { get => actions; }
+        public ScriptableTransition[] Transitions { get => transitions; }
 
         /// <summary>
         /// Called when the state is entered.
         /// </summary>
         public virtual void OnEnter(ScriptableStateController stateController)
         {
-            if (timer == null)
-                timer = new Timer(GetType().Name);
-
-            timer.Start(0);
-
             for (int i = 0; i < actions.Length; i++)
                 actions[i].OnEnter(stateController);
         }
@@ -36,8 +30,6 @@ namespace GD.FSM.SO
         /// </summary>
         public void UpdateState(ScriptableStateController stateController)
         {
-            timer.Update();
-
             for (int i = 0; i < actions.Length; i++)
                 actions[i].OnUpdate(stateController);
         }
@@ -49,8 +41,6 @@ namespace GD.FSM.SO
         {
             for (int i = 0; i < actions.Length; i++)
                 actions[i].OnExit(stateController);
-
-            timer.Stop();
         }
     }
 }

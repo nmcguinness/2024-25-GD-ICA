@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using GD.Types;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,18 +7,20 @@ namespace GD.FSM.Simple
 {
     public class PatrolState : State
     {
-        private int WalkHash = Animator.StringToHash("Walk_N");
+        private int WalkHash;
         private NavMeshAgent agent;
         private List<Transform> waypoints;
         private int currentWaypointIndex = 0;
 
         public PatrolState(Blackboard blackboard,
             StateController characterController, Animator animator,
-            NavMeshAgent agent)
+            NavMeshAgent agent, string animationName)
             : base(blackboard, characterController, animator)
         {
             this.agent = agent;
-            waypoints = blackboard.waypoints;
+            waypoints = blackboard.GetValue<List<Transform>>(WaypointType.Patrol.ToString());
+
+            WalkHash = Animator.StringToHash(animationName);
 
             if (waypoints == null || waypoints.Count == 0)
                 throw new System.Exception("No waypoints found");

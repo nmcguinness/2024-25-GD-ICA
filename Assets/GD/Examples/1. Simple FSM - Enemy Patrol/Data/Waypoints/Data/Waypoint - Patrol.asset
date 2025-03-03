@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f1535b4bc97ccb49939c0b1a420d8aa, type: 3}
+  m_Name: Waypoint - Patrol
+  m_EditorClassIdentifier: 
+  name: Waypoint - Patrol
+  description: Visited by enemy guard NPCs on patrol
+  uniqueID: d9980f49-4a48-4f20-b629-057e929ee518
+  waypointType: 9
+  priorityLevel: 1

@@ -1,5 +1,4 @@
 ﻿using GD.Predicates;
-using GD.Utility;
 using System;
 using System.Collections.Generic;
 
@@ -9,7 +8,6 @@ namespace GD.FSM.Simple
     /// Manages the state machine and transitions between states.
     /// </summary>
     /// <see cref="StateController"/>
-    /// <seealso cref="TimeTickSystem"/>
     public class StateMachine
     {
         private StateNode current;
