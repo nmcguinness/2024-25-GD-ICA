@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abe2f7b87ed7bac4eb8facf47c3f542d, type: 3}
   m_Name: FSM - SO - Action - Idle
   m_EditorClassIdentifier: 
+  animationName: Idle
+  crossFadeTime: 0.1

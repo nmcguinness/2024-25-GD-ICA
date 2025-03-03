@@ -13,15 +13,11 @@ namespace GD.FSM.SO
 
         private int animationHash;
 
-        protected virtual void Awake()
-        {
-            animationHash = Animator.StringToHash(animationName.Trim());
-        }
-
         protected virtual void PlayAnimation(ScriptableStateController stateController)
         {
             if (stateController.Animator != null)
             {
+                animationHash = Animator.StringToHash(animationName.Trim());
                 stateController.Animator.CrossFade(animationHash, crossFadeTime);
             }
             else
