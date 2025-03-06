@@ -2,7 +2,7 @@
 
 ## Easy
 
-### Environmental: Environmental Alert Predicate
+### Exercise 1: Environmental: Environmental Alert Predicate
 
 - **Difficulty:** Easy  
 - **Exercise Description:**  
@@ -14,7 +14,7 @@
   - Return `true` if an alert is active; otherwise, return `false`.
   - Log a warning if the key is not present on the blackboard.
 
-### Probabilistic: Random Probability Predicate
+### Exercise 2: Probabilistic: Random Probability Predicate
 
 - **Difficulty:** Easy  
 - **Exercise Description:**  
@@ -26,7 +26,7 @@
   - Compare the generated random value with the probability threshold.
   - Return `true` if the random value is less than the threshold; otherwise, return `false`.
 
-### Target: Target Set Predicate
+### Exercise 3: Target: Target Set Predicate
 
 - **Difficulty:** Easy  
 - **Exercise Description:**  
@@ -40,7 +40,7 @@
 
 ## Intermediate
 
-### Probabilistic: Random Wait Predicate
+### Exercise 4: Probabilistic: Random Wait Predicate
 
 - **Difficulty:** Intermediate  
 - **Exercise Description:**  
@@ -54,7 +54,7 @@
   - Provide a method to reset the wait state so that a new random duration can be generated.
   - Validate that `min` is ≥ 0 and `max` is ≥ `min`.
 
-### Probabilistic: Random Above Threshold Predicate
+### Exercise 5: Probabilistic: Random Above Threshold Predicate
 
 - **Difficulty:** Intermediate  
 - **Exercise Description:**  
@@ -67,7 +67,7 @@
   - Return `true` if the generated number is greater than the threshold; otherwise, return `false`.
   - Validate input values as necessary.
 
-### Environmental: Hour Of Day Predicate
+### Exercise 6: Environmental: Hour Of Day Predicate
 
 - **Difficulty:** Intermediate  
 - **Exercise Description:**  
@@ -80,7 +80,7 @@
   - Return `true` if the current time is within the defined window; otherwise, return `false`.
   - Validate that the provided time values are within the 0 to 24 range and that the window is defined correctly.
 
-### Target: Distance To Target Predicate
+### Exercise 7: Target: Distance To Target Predicate
 
 - **Difficulty:** Intermediate  
 - **Exercise Description:**  
@@ -95,7 +95,7 @@
 
 ## Challenging
 
-### Patrol: Line Of Sight Predicate
+### Exercise 8: Patrol: Line Of Sight Predicate
 
 - **Difficulty:** Challenging  
 - **Exercise Description:**  
