@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b5c9ca83a9faa47843787543170c9c, type: 3}
   m_Name: Always True Predicate
   m_EditorClassIdentifier: 
-  isAlways: 0
+  isAlways: 1
