@@ -1,9 +1,5 @@
 # Predicate Exercises
 
-This document contains a set of predicate exercises categorized by difficulty and type for Unity state machine projects. Each exercise includes an exercise description, a list of requirements, and a difficulty level.
-
----
-
 ## Easy
 
 ### Environmental: Environmental Alert Predicate
@@ -18,8 +14,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Return `true` if an alert is active; otherwise, return `false`.
   - Log a warning if the key is not present on the blackboard.
 
----
-
 ### Probabilistic: Random Probability Predicate
 
 - **Difficulty:** Easy  
@@ -32,8 +26,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Compare the generated random value with the probability threshold.
   - Return `true` if the random value is less than the threshold; otherwise, return `false`.
 
----
-
 ### Target: Target Set Predicate
 
 - **Difficulty:** Easy  
@@ -45,8 +37,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Verify that the target is a valid `UnityEngine.Object`.
   - Return `true` if the target is non-null; otherwise, return `false`.
   - Log an appropriate warning if the target is missing.
-
----
 
 ## Intermediate
 
@@ -64,8 +54,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Provide a method to reset the wait state so that a new random duration can be generated.
   - Validate that `min` is ≥ 0 and `max` is ≥ `min`.
 
----
-
 ### Probabilistic: Random Above Threshold Predicate
 
 - **Difficulty:** Intermediate  
@@ -78,8 +66,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Generate a random number using `Random.Range(min, max)`.
   - Return `true` if the generated number is greater than the threshold; otherwise, return `false`.
   - Validate input values as necessary.
-
----
 
 ### Environmental: Hour Of Day Predicate
 
@@ -94,8 +80,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Return `true` if the current time is within the defined window; otherwise, return `false`.
   - Validate that the provided time values are within the 0 to 24 range and that the window is defined correctly.
 
----
-
 ### Target: Distance To Target Predicate
 
 - **Difficulty:** Intermediate  
@@ -108,8 +92,6 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Calculate the distance between the agent’s position and the target’s position using `Vector3.Distance`.
   - Return `true` if the distance is less than or equal to a specified maximum; otherwise, return `false`.
   - Log warnings if the target or its required components are missing.
-
----
 
 ## Challenging
 
@@ -128,4 +110,3 @@ This document contains a set of predicate exercises categorized by difficulty an
   - Return `true` if no obstructing object is detected; otherwise, return `false`.
   - Log warnings if necessary, such as when the target is invalid or missing.
 
----
