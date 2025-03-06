@@ -1,6 +1,7 @@
-﻿using UnityEngine;
-using UnityEngine.AI;
+﻿using Sirenix.OdinInspector;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
 
 namespace GD.FSM.SO
 {
@@ -10,12 +11,17 @@ namespace GD.FSM.SO
         [SerializeField]
         private string waypointsKey = "Patrol";
 
-        private int currentWaypointIndex = 0;
+        [FoldoutGroup("Debug Info", expanded: false)]
+        [ShowInInspector, ReadOnly]
         private List<Transform> waypoints;
 
-        public override void OnEnter(ScriptableStateController stateController)
+        [FoldoutGroup("Debug Info")]
+        [ShowInInspector, ReadOnly]
+        private int currentIndex = 0;
+
+        public override void Initialize(ScriptableStateController stateController)
         {
-            base.OnEnter(stateController);
+            base.Initialize(stateController);
 
             if (!stateController.Blackboard.HasValue(waypointsKey))
             {
@@ -29,9 +35,13 @@ namespace GD.FSM.SO
                 Debug.LogWarning("Waypoint list is empty.");
                 return;
             }
+        }
 
-            MoveToNextWaypoint(stateController);
+        public override void OnEnter(ScriptableStateController stateController)
+        {
+            base.OnEnter(stateController);
             PlayAnimation(stateController);
+            MoveToNextWaypoint(stateController);
         }
 
         public override void OnUpdate(ScriptableStateController stateController)
@@ -41,14 +51,18 @@ namespace GD.FSM.SO
             NavMeshAgent agent = stateController.Agent;
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
-                currentWaypointIndex = (currentWaypointIndex + 1) % waypoints.Count;
                 MoveToNextWaypoint(stateController);
             }
         }
 
         private void MoveToNextWaypoint(ScriptableStateController stateController)
         {
-            stateController.Agent.SetDestination(waypoints[currentWaypointIndex].position);
+            if (currentIndex >= 0 && currentIndex < waypoints.Count)
+            {
+                stateController.Agent.SetDestination(waypoints[currentIndex].position);
+
+                currentIndex = (currentIndex + 1) % waypoints.Count;
+            }
         }
     }
 }

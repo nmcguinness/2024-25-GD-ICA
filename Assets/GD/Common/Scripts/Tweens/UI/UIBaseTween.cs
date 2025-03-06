@@ -25,7 +25,7 @@ namespace GD.Tweens
         [PropertyOrder(20)]
         protected UnityEvent onComplete;
 
-        [SerializeField, ReadOnly]
+        [ShowInInspector, ReadOnly]
         [PropertyOrder(-1)]
         protected VisibilityState visibilityState = VisibilityState.Start;
 

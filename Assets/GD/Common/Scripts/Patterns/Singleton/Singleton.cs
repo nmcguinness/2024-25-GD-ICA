@@ -9,58 +9,75 @@ namespace GD
     //See C# Generics - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/
 
     /// <summary>
-    /// Parent class for all singletons (SelectionManager, InventoryManager, GameManager)
+    /// A generic singleton base class for Unity MonoBehaviour singletons (SelectionManager,
+    /// InventoryManager, GameManager, etc.). Ensures only one instance of T exists at runtime.
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <see cref="TimeTickSystem"/>
-    /// <see cref="https://refactoring.guru/design-patterns/singleton"/>
+    /// <typeparam name="T">The type of the concrete singleton class.</typeparam>
     public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T instance;
 
+        /// <summary>
+        /// Public accessor for the singleton instance. If none is found in the scene,
+        /// a new one will be created.
+        /// </summary>
         public static T Instance
         {
             get
             {
-                instance = FindFirstObjectByType<T>();
-                if (instance != null)
+                if (instance == null)
                 {
-                    return instance;
-                }
-                else
-                {
-                    GameObject obj = new GameObject();              //create an object to be added to the scene
-                    obj.name = typeof(T).ToString();                //give it a name based on class name
-                    obj.hideFlags = HideFlags.HideAndDontSave;      //uncomment to hide in Hierarchy window and dont save across scenes
-                    instance = obj.AddComponent<T>();               //add the singleton to the scene object
+                    instance = FindFirstObjectByType<T>();
+
+                    // If still null, create a new GameObject and add T.
+                    if (instance == null)
+                    {
+                        GameObject obj = new GameObject(typeof(T).Name);
+                        instance = obj.AddComponent<T>();
+                    }
                 }
                 return instance;
             }
         }
 
+        /// <summary>
+        /// When the MonoBehaviour awakens, if no instance is assigned, we become the singleton.
+        /// Otherwise, if there's a different instance, we destroy ourselves.
+        /// </summary>
         protected virtual void Awake()
         {
-            // Ensure only one instance exists
-            if (Instance != this)
+            // If we haven’t assigned an instance yet, claim ownership.
+            if (instance == null)
             {
+                instance = this as T;
+
+                // Optionally, persist across scene loads if desired.
+                DontDestroyOnLoad(gameObject);
+            }
+            else if (instance != this)
+            {
+                // Another instance is already the singleton, so destroy this one.
                 Destroy(gameObject);
                 return;
             }
 
-            // Ensure the GameObject is at the root of the hierarchy
+            // Ensure the GameObject is at the root of the hierarchy.
             if (transform.parent != null)
             {
-                transform.SetParent(null); // Detach from any parent
+                transform.SetParent(null);
             }
-
-            // Optionally, keep this object across scenes
-            DontDestroyOnLoad(gameObject);
         }
 
-        private void OnDestroy()
+        /// <summary>
+        /// If the singleton is destroyed, clear the static reference
+        /// so a new one can be created in the future if needed.
+        /// </summary>
+        protected virtual void OnDestroy()
         {
             if (instance == this)
+            {
                 instance = null;
+            }
         }
     }
 }

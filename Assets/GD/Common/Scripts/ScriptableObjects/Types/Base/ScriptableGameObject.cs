@@ -13,7 +13,7 @@ namespace GD.Types
         #region Fields
 
         [FoldoutGroup("Info", expanded: false)]
-        [SerializeField, Tooltip("Unique identifier for this object."), ReadOnly]
+        [ShowInInspector, Tooltip("Unique identifier for this object."), ReadOnly]
         private string uniqueID;
 
         [SerializeField]

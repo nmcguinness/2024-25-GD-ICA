@@ -14,8 +14,16 @@ namespace GD.FSM.SO
         [SerializeField]
         private NavMeshAgent agent;
 
+        private ScriptableStateMachine stateMachine;
+
         public Blackboard Blackboard { get => blackboard; }
         public Animator Animator { get => animator; }
         public NavMeshAgent Agent { get => agent; }
+        public ScriptableStateMachine ScriptableStateMachine { get => stateMachine; }
+
+        private void Awake()
+        {
+            stateMachine = GetComponent<ScriptableStateMachine>();
+        }
     }
 }

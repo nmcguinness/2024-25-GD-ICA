@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace GD.Selection
@@ -18,7 +19,8 @@ namespace GD.Selection
         [Range(0.1f, 100)]
         private float rayLength = 10;
 
-        [ReadOnly] private Ray ray;
+        [ShowInInspector, ReadOnly]
+        private Ray ray;
 
         public Ray CreateRay()
         {

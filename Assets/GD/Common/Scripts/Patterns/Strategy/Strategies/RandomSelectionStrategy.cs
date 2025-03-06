@@ -1,12 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using Sirenix.OdinInspector;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace GD.Patterns
 {
+    //EXERCISE
     [CreateAssetMenu(fileName = "RandomSelectionStrategy", menuName = "GD/Selection Strategies/Random")]
     public class RandomSelectionStrategy : SelectionStrategy
     {
-        [SerializeField, ReadOnly]
+        [ShowInInspector, ReadOnly]
         private int randomIndex;
 
         public override int GetIndex<T>(List<T> list)

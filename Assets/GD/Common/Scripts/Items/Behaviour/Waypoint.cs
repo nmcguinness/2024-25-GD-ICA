@@ -2,13 +2,13 @@
 using GD.Events;
 using GD.FSM;
 using GD.Items;
-using GD.Types;
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace GD.Behaviour
 {
+    [DefaultExecutionOrder(-100)]
     public class Waypoint : MonoBehaviour, IVisitable
     {
         [SerializeField]

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,7 @@ public class UIPrompt
     [SerializeField]
     private bool isItalic;
 
-    [SerializeField, ReadOnly]
+    [ShowInInspector, ReadOnly]
     private Vector2 dimensions;
 
     #region Constructors

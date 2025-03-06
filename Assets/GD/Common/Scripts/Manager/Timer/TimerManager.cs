@@ -3,42 +3,119 @@ using UnityEngine;
 
 namespace GD.Utility
 {
+    /// <summary>
+    /// A manager that maintains a pool of Timer objects and tracks them by (ID, reference).
+    /// </summary>
+    /// <see cref="FSM.SO.ScriptableStateMachine"/>
+    [DefaultExecutionOrder(-100)]
     public class TimerManager : Singleton<TimerManager>
     {
-        private readonly Dictionary<string, Timer> activeTimers = new();
+        [Header("Timer Pool Settings")]
+        [SerializeField] private int initialPoolSize = 10;
+
+        // The pool of reusable Timer objects:
+        private Queue<Timer> timerPool = new Queue<Timer>();
+
+        // Currently active timers, mapped from TimerKey -> Timer
+        private Dictionary<string, Timer> activeTimers = new Dictionary<string, Timer>();
+
+        protected override void Awake()
+        {
+            base.Awake();
+
+            // Pre-fill the pool with a certain number of Timers.
+            for (int i = 0; i < initialPoolSize; i++)
+            {
+                // By default, name them something like "PooledTimer" (or empty string).
+                timerPool.Enqueue(new Timer());
+            }
+        }
+
+        public void UnregisterTimer(string ID)
+        {
+            if (activeTimers.TryGetValue(ID, out Timer timer))
+            {
+                timer.Stop();
+                activeTimers.Remove(ID);
+                ReturnToPool(timer);
+            }
+        }
+
+        public void StartTimer(string ID, float duration)
+        {
+            // If no timer is registered, create it
+            if (!activeTimers.TryGetValue(ID, out Timer timer))
+            {
+                timer = GetFromPool();
+                activeTimers[ID] = timer;
+            }
+            timer.Start(duration);
+        }
+
+        public void StopTimer(string ID, object reference)
+        {
+            if (activeTimers.TryGetValue(ID, out Timer timer))
+            {
+                timer.Stop();
+            }
+        }
+
+        public void PauseTimer(string ID)
+        {
+            if (activeTimers.TryGetValue(ID, out Timer timer))
+            {
+                timer.Pause();
+            }
+        }
+
+        public void ResumeTimer(string ID)
+        {
+            if (activeTimers.TryGetValue(ID, out Timer timer))
+            {
+                timer.Resume();
+            }
+        }
+
+        public Timer GetTimer(string ID)
+        {
+            activeTimers.TryGetValue(ID, out Timer timer);
+            return timer;
+        }
+
+        public bool HasElapsed(string ID, float duration)
+        {
+            activeTimers.TryGetValue(ID, out Timer timer);
+
+            if (timer == null)
+                Debug.LogError($"Timer with ID {ID} not found.");
+
+            return timer.HasElapsed(duration);
+        }
+
+        private List<Timer> tempTimers = new List<Timer>();
 
         private void Update()
         {
-            foreach (var timer in activeTimers.Values)
-                timer.Update();
-        }
+            tempTimers.Clear();
+            tempTimers.AddRange(activeTimers.Values);
 
-        private void FixedUpdate()
-        {
-            foreach (var timer in activeTimers.Values)
-                timer.FixedUpdate();
-        }
-
-        public void RegisterTimer(Timer timer)
-        {
-            if (!activeTimers.ContainsKey(timer.Name))
+            foreach (Timer timer in tempTimers)
             {
-                activeTimers[timer.Name] = timer;
-                Debug.Log($"[TimerManager] Registered Timer: {timer.Name}");
+                timer.Tick(Time.deltaTime);
             }
         }
 
-        public void UnregisterTimer(Timer timer)
+        private Timer GetFromPool()
         {
-            if (activeTimers.Remove(timer.Name))
-            {
-                Debug.Log($"[TimerManager] Unregistered Timer: {timer.Name}");
-            }
+            return timerPool.Count > 0 ? timerPool.Dequeue() : new Timer();
         }
 
-        public void DebugActiveTimers()
+        private void ReturnToPool(Timer timer)
         {
-            Debug.Log("[TimerManager] Active Timers: " + string.Join(", ", activeTimers.Keys));
+            // You might want to reset the timer to a 'fresh' state
+            timer.Reset(0);
+            // Actually enqueue it so we can reuse the object
+            timerPool.Enqueue(timer);
         }
     }
 }

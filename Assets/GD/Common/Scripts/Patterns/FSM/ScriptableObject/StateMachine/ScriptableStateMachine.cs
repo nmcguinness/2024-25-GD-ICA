@@ -1,63 +1,53 @@
-﻿using System.Collections.Generic;
+﻿using GD.Utility;
+using Sirenix.OdinInspector;
 using System.Linq;
 using UnityEngine;
 
 namespace GD.FSM.SO
 {
-    /// <summary>
-    /// Manages the state machine and transitions between SO-based states.
-    /// </summary>
-    /// <see cref="ScriptableStateController"/>
     [RequireComponent(typeof(ScriptableStateController))]
     public class ScriptableStateMachine : MonoBehaviour
     {
         [SerializeField]
-        [Tooltip("Initial state to start the state machine.")]
         private ScriptableState initialState;
 
         [SerializeField]
-        [Tooltip("List of states to manage.")]
-        private List<ScriptableState> states;
+        private ScriptableState[] states;
 
         [SerializeField]
-        [Tooltip("[Optional] List of transitions that can interrupt the current state.")]
-        private List<ScriptableTransition> optionalInterruptionTransitions;
+        private ScriptableTransition[] optionalInterruptionTransitions;
 
-        private ScriptableStateController stateController;
+        [FoldoutGroup("Debug Info", expanded: false)]
+        [ShowInInspector, ReadOnly]
         private ScriptableState currentState;
 
-        private void Start()
+        private ScriptableStateController stateController;
+
+        private void Awake()
         {
             stateController = GetComponent<ScriptableStateController>();
-
-            if (stateController == null)
-            {
-                Debug.LogError("State controller is not assigned.");
-                return;
-            }
 
             Initialize();
         }
 
-        public void Initialize()
+        private void Initialize()
         {
-            if (initialState == null)
+            if (initialState == null || initialState.Actions == null || initialState.Actions.Count() == 0)
             {
-                Debug.LogError("Initial state is not assigned.");
+                Debug.LogError("Initial state is not assigned and/or has no actions.");
                 return;
             }
 
-            if (initialState.Actions == null || initialState.Actions.Count() == 0)
+            // Warm up the states
+            for (int i = 0; i < states.Length; i++)
             {
-                Debug.LogError("Initial state has no actions.");
-                return;
+                states[i].Initialize(stateController);
             }
 
-            foreach (var state in states)
-                foreach (var action in state.Actions)
-                    action.Initialize();
-
+            // Set the insertion state for the FSM
             currentState = initialState;
+
+            // Enter the initial state
             currentState.OnEnter(stateController);
         }
 
@@ -65,31 +55,38 @@ namespace GD.FSM.SO
         {
             if (currentState == null) return;
 
+            // Check optional transitions first
             var transition = GetTransition();
             if (transition != null)
             {
-                ChangeState(transition.Predicate.Evaluate(stateController) ? transition.TrueState : transition.FalseState);
+                bool predicateResult = transition.Predicate.Evaluate(stateController);
+                ChangeState(predicateResult ? transition.TrueState : transition.FalseState);
                 return;
             }
 
+            // Otherwise update the current state
             currentState.UpdateState(stateController);
         }
 
         private ScriptableTransition GetTransition()
         {
-            foreach (var transition in optionalInterruptionTransitions)
+            // Check optional transitions first (e.g. player has captured the flag and so game ends and NPC surrenders)
+            for (int i = 0; i < optionalInterruptionTransitions.Length; i++)
             {
-                if (transition.Predicate.Evaluate(stateController))
+                if (optionalInterruptionTransitions[i].Predicate.Evaluate(stateController))
                 {
-                    return transition;
+                    return optionalInterruptionTransitions[i];
                 }
             }
 
-            foreach (var transition in currentState.Transitions)
+            var transitions = currentState.Transitions;
+
+            // Check the transitions of the current state (e.g. player has moved to a new area and so NPC follows)
+            for (int i = 0; i < transitions.Length; i++)
             {
-                if (transition.Predicate.Evaluate(stateController))
+                if (transitions[i].Predicate.Evaluate(stateController))
                 {
-                    return transition;
+                    return transitions[i];
                 }
             }
 
@@ -98,7 +95,7 @@ namespace GD.FSM.SO
 
         private void ChangeState(ScriptableState newState)
         {
-            // Do not change to the same state
+            // Avoid re‐entering the same state
             if (newState == null || newState == currentState) return;
 
             currentState.OnExit(stateController);

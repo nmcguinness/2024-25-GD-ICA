@@ -32,7 +32,7 @@ namespace GD.FSM.Simple
             Debug.Log(message: $"OnEnter: {GetType().Name} at {Time.time}");
 
             if (timer == null)
-                timer = new Timer(GetType().Name);
+                timer = new Timer();
 
             timer.Start(0);
         }
@@ -42,15 +42,12 @@ namespace GD.FSM.Simple
         /// </summary>
         public virtual void UpdateState()
         {
-            timer.Update();
+            timer.Tick(Time.deltaTime);
         }
 
-        /// <summary>
-        /// Used for states that relate to physics or other fixed time updates.
-        /// </summary>
         public virtual void FixedUpdateState()
         {
-            timer.FixedUpdate();
+            //noop
         }
 
         /// <summary>

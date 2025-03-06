@@ -40,10 +40,10 @@ namespace GD.FSM.Simple
 
             // 3. Connect the states
             stateMachine.AddTransition(idleState, patrolState,
-                new FuncPredicate(() => idleState.timer.ElapsedUpdateTime > 2));
+                new FuncPredicate(() => idleState.timer.ElapsedTime > 2));
 
             stateMachine.AddTransition(patrolState, idleState,
-          new FuncPredicate(() => patrolState.timer.ElapsedUpdateTime > 5));
+          new FuncPredicate(() => patrolState.timer.ElapsedTime > 5));
 
             // 3a. Add the ANY transition states
             //var levelUpState = new LevelUpState(blackboard, this, animator);
