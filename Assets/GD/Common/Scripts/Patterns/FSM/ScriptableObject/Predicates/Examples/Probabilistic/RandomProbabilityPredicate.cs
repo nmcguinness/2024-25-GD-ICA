@@ -8,12 +8,12 @@ namespace GD.FSM.SO
     public class RandomProbabilityPredicate : ScriptablePredicate
     {
         [SerializeField, Range(0f, 1f)]
-        [Tooltip("Lower probability equals less likelihood to return true")]
-        private float probability = 0.5f;
+        [Tooltip("Lower threshold equals less likelihood to return true")]
+        private float threshold = 0.5f;
 
         public override bool Evaluate(ScriptableStateController controller)
         {
-            return Random.value < probability;
+            return Random.value < threshold;
         }
     }
 }

@@ -64,5 +64,13 @@ namespace GD.FSM.SO
                 currentIndex = (currentIndex + 1) % waypoints.Count;
             }
         }
+
+        public override void OnExit(ScriptableStateController stateController)
+        {
+            // Bug fix for player still moving when not in patrol state
+            stateController.Agent.ResetPath();
+
+            base.OnExit(stateController);
+        }
     }
 }
