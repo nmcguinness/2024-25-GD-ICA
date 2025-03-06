@@ -1,7 +1,5 @@
 # Predicate Exercises
 
-## Easy
-
 ### Exercise 1: Environmental: Environmental Alert Predicate
 
 - **Difficulty:** Easy  
@@ -37,8 +35,6 @@
   - Verify that the target is a valid `UnityEngine.Object`.
   - Return `true` if the target is non-null; otherwise, return `false`.
   - Log an appropriate warning if the target is missing.
-
-## Intermediate
 
 ### Exercise 4: Probabilistic: Random Wait Predicate
 
@@ -92,8 +88,6 @@
   - Calculate the distance between the agent’s position and the target’s position using `Vector3.Distance`.
   - Return `true` if the distance is less than or equal to a specified maximum; otherwise, return `false`.
   - Log warnings if the target or its required components are missing.
-
-## Challenging
 
 ### Exercise 8: Patrol: Line Of Sight Predicate
 
