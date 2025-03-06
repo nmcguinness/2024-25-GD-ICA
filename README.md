@@ -14,15 +14,17 @@ This repository contains Unity samples used to learn core Unity AI concepts (FSM
 - [FSM - Predicates](/Exercises/FSM/Predicates.md)
 
 
-### To Do - Week 5
+## To Do
+
+### Week 5
 - [x] Implement base interfaces
 - [x] Test basic FSM
 - [x] Implement Idle and Patrol
 
-### To Do - Week 6
+### Week 6
 - [x] Implement Timer
 - [x] Add animated enemy
 
-### To Do - Week 7
+### Week 7
 - [ ] Implement CompositePredicate
    
